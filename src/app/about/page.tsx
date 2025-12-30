@@ -1,6 +1,7 @@
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import { timelineEvents, processSteps } from "@/constants/data";
+import { ChevronRight } from "lucide-react";
 
 export default function AboutPage() {
   return (
@@ -219,7 +220,7 @@ export default function AboutPage() {
                 className="hidden md:flex items-center gap-2 text-white border-b border-white/30 pb-1 hover:border-primary hover:text-primary transition-colors mt-8 md:mt-0"
               >
                 <span className="text-xs font-bold uppercase tracking-widest">Visit the Atelier</span>
-                <span className="material-symbols-outlined text-sm">arrow_forward</span>
+                <ChevronRight className="w-4 h-4" />
               </a>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">

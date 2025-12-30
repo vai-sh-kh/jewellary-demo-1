@@ -4,6 +4,7 @@ import ProductImageGallery from "@/components/products/ProductImageGallery";
 import { products, reviews, productSpecs } from "@/constants/data";
 import { notFound } from "next/navigation";
 import Link from "next/link";
+import { Star, StarHalf, ChevronRight, Calendar, CheckCircle, Truck, Package, ChevronDown } from "lucide-react";
 
 export default function ProductDetailPage({ params }: { params: { id: string } }) {
   const product = products.find((p) => p.id === params.id);
@@ -50,11 +51,15 @@ export default function ProductDetailPage({ params }: { params: { id: string } }
                   {product.rating && (
                     <div className="flex items-center gap-2">
                       <div className="flex text-primary text-sm">
-                        {[...Array(5)].map((_, i) => (
-                          <span key={i} className="material-symbols-outlined text-[16px] fill-current">
-                            {i < Math.floor(product.rating!) ? "star" : i < product.rating! ? "star_half" : "star"}
-                          </span>
-                        ))}
+                        {[...Array(5)].map((_, i) => {
+                          if (i < Math.floor(product.rating!)) {
+                            return <Star key={i} className="w-4 h-4 fill-current" />;
+                          } else if (i < product.rating!) {
+                            return <StarHalf key={i} className="w-4 h-4 fill-current" />;
+                          } else {
+                            return <Star key={i} className="w-4 h-4" />;
+                          }
+                        })}
                       </div>
                       <Link
                         href="#reviews"
@@ -123,23 +128,21 @@ export default function ProductDetailPage({ params }: { params: { id: string } }
               <div className="flex flex-col gap-3 md:gap-4 border-b border-border-dark pb-6 md:pb-8 lg:pb-10 mb-6 md:mb-8">
                 <button className="w-full bg-primary hover:bg-primary-hover text-background-dark min-h-[44px] md:h-14 font-bold uppercase tracking-[0.15em] text-[10px] md:text-xs transition-all duration-300 flex items-center justify-between px-6 md:px-8 group">
                   <span>Add to Cart</span>
-                  <span className="group-hover:translate-x-1 transition-transform duration-300 material-symbols-outlined text-xs md:text-sm">
-                    arrow_forward
-                  </span>
+                  <ChevronRight className="group-hover:translate-x-1 transition-transform duration-300 w-3 h-3 md:w-4 md:h-4" />
                 </button>
                 <button className="w-full bg-transparent hover:bg-surface-dark border border-border-dark text-white min-h-[44px] md:h-12 font-bold uppercase tracking-[0.15em] text-[9px] md:text-[10px] transition-colors flex items-center justify-center gap-2">
-                  <span className="material-symbols-outlined text-xs md:text-sm">calendar_month</span>
+                  <Calendar className="w-3 h-3 md:w-4 md:h-4" />
                   Book a Consultation
                 </button>
                 <div className="flex items-center justify-center gap-6 mt-2">
                   <div className="flex items-center gap-2 text-text-body text-[10px] uppercase tracking-wider">
-                    <span className="material-symbols-outlined text-sm text-primary">verified</span> Authentic
+                    <CheckCircle className="w-4 h-4 text-primary" /> Authentic
                   </div>
                   <div className="flex items-center gap-2 text-text-body text-[10px] uppercase tracking-wider">
-                    <span className="material-symbols-outlined text-sm text-primary">local_shipping</span> Free Shipping
+                    <Truck className="w-4 h-4 text-primary" /> Free Shipping
                   </div>
                   <div className="flex items-center gap-2 text-text-body text-[10px] uppercase tracking-wider">
-                    <span className="material-symbols-outlined text-sm text-primary">package_2</span> Gift Box
+                    <Package className="w-4 h-4 text-primary" /> Gift Box
                   </div>
                 </div>
               </div>
@@ -147,9 +150,7 @@ export default function ProductDetailPage({ params }: { params: { id: string } }
                 <details className="group cursor-pointer" open>
                   <summary className="flex items-center justify-between text-white py-5 hover:text-primary transition-colors">
                     <span className="font-serif italic text-lg tracking-wide">Product Specifications</span>
-                    <span className="material-symbols-outlined font-light transition-transform duration-300 group-open:rotate-180">
-                      expand_more
-                    </span>
+                    <ChevronDown className="font-light transition-transform duration-300 group-open:rotate-180 w-5 h-5" />
                   </summary>
                   <div className="pb-6 text-sm text-text-body font-light">
                     <div className="grid grid-cols-2 gap-y-3 gap-x-4">
@@ -183,9 +184,7 @@ export default function ProductDetailPage({ params }: { params: { id: string } }
                 <details className="group cursor-pointer">
                   <summary className="flex items-center justify-between text-white py-5 hover:text-primary transition-colors">
                     <span className="font-serif italic text-lg tracking-wide">Shipping & Returns</span>
-                    <span className="material-symbols-outlined font-light transition-transform duration-300 group-open:rotate-180">
-                      expand_more
-                    </span>
+                    <ChevronDown className="font-light transition-transform duration-300 group-open:rotate-180 w-5 h-5" />
                   </summary>
                   <div className="pb-6 text-sm text-text-body font-light leading-relaxed">
                     <p className="mb-2">
@@ -213,9 +212,7 @@ export default function ProductDetailPage({ params }: { params: { id: string } }
                 </div>
                 <div className="flex text-primary mb-3 md:mb-4 gap-1">
                   {[...Array(5)].map((_, i) => (
-                    <span key={i} className="material-symbols-outlined fill-current text-lg md:text-xl">
-                      star
-                    </span>
+                    <Star key={i} className="fill-current w-5 h-5 md:w-6 md:h-6" />
                   ))}
                 </div>
                 <p className="text-xs md:text-sm text-text-body mb-6 md:mb-8">
@@ -245,9 +242,7 @@ export default function ProductDetailPage({ params }: { params: { id: string } }
                     <h4 className="text-white font-bold text-lg mb-2">{review.title}</h4>
                     <div className="flex text-primary text-xs mb-4 gap-0.5">
                       {[...Array(review.rating)].map((_, i) => (
-                        <span key={i} className="material-symbols-outlined text-[14px] fill-current">
-                          star
-                        </span>
+                        <Star key={i} className="w-[14px] h-[14px] fill-current" />
                       ))}
                     </div>
                     <p className="text-text-body leading-relaxed font-light">{review.content}</p>

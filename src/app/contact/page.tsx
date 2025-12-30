@@ -1,5 +1,6 @@
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
+import { Send, MapPin, Phone, Mail, Clock, Globe, Camera, Share2 } from "lucide-react";
 
 export default function ContactPage() {
   return (
@@ -77,7 +78,7 @@ export default function ContactPage() {
                   type="submit"
                   className="w-full bg-gradient-to-r from-primary to-primary-hover text-background-dark font-bold py-3 md:py-4 rounded-lg md:rounded-xl flex items-center justify-center gap-2 md:gap-3 transition-all duration-300 hover:shadow-lg hover:shadow-primary/20 hover:scale-[1.01] active:scale-[0.99] min-h-[44px] text-sm md:text-base"
                 >
-                  <span className="material-symbols-outlined text-lg md:text-[20px]">send</span>
+                  <Send className="w-5 h-5 md:w-[20px] md:h-[20px]" />
                   <span className="tracking-wide">Send Message</span>
                 </button>
               </form>
@@ -91,7 +92,7 @@ export default function ContactPage() {
               <div className="space-y-6 md:space-y-8">
                 <div className="flex gap-3 md:gap-4">
                   <div className="flex-shrink-0 w-11 h-11 md:w-12 md:h-12 rounded-full bg-primary/20 flex items-center justify-center min-h-[44px] min-w-[44px]">
-                    <span className="material-symbols-outlined text-primary text-xl md:text-2xl">location_on</span>
+                    <MapPin className="text-primary w-5 h-5 md:w-6 md:h-6" />
                   </div>
                   <div>
                     <h3 className="text-white font-medium mb-2">Visit Our Boutiques</h3>
@@ -106,7 +107,7 @@ export default function ContactPage() {
                 </div>
                 <div className="flex gap-3 md:gap-4">
                   <div className="flex-shrink-0 w-11 h-11 md:w-12 md:h-12 rounded-full bg-primary/20 flex items-center justify-center min-h-[44px] min-w-[44px]">
-                    <span className="material-symbols-outlined text-primary text-xl md:text-2xl">call</span>
+                    <Phone className="text-primary w-5 h-5 md:w-6 md:h-6" />
                   </div>
                   <div>
                     <h3 className="text-white font-medium mb-2 text-sm md:text-base">Phone</h3>
@@ -120,7 +121,7 @@ export default function ContactPage() {
                 </div>
                 <div className="flex gap-3 md:gap-4">
                   <div className="flex-shrink-0 w-11 h-11 md:w-12 md:h-12 rounded-full bg-primary/20 flex items-center justify-center min-h-[44px] min-w-[44px]">
-                    <span className="material-symbols-outlined text-primary text-xl md:text-2xl">mail</span>
+                    <Mail className="text-primary w-5 h-5 md:w-6 md:h-6" />
                   </div>
                   <div>
                     <h3 className="text-white font-medium mb-2 text-sm md:text-base">Email</h3>
@@ -134,7 +135,7 @@ export default function ContactPage() {
                 </div>
                 <div className="flex gap-3 md:gap-4">
                   <div className="flex-shrink-0 w-11 h-11 md:w-12 md:h-12 rounded-full bg-primary/20 flex items-center justify-center min-h-[44px] min-w-[44px]">
-                    <span className="material-symbols-outlined text-primary text-xl md:text-2xl">schedule</span>
+                    <Clock className="text-primary w-5 h-5 md:w-6 md:h-6" />
                   </div>
                   <div>
                     <h3 className="text-white font-medium mb-2 text-sm md:text-base">Book an Appointment</h3>
@@ -157,19 +158,19 @@ export default function ContactPage() {
                   href="#"
                   className="w-11 h-11 md:w-10 md:h-10 rounded-full border border-white/10 flex items-center justify-center text-white/60 hover:text-white hover:border-white transition-all min-h-[44px] min-w-[44px]"
                 >
-                  <span className="material-symbols-outlined text-base md:text-lg">public</span>
+                  <Globe className="w-4 h-4 md:w-5 md:h-5" />
                 </a>
                 <a
                   href="#"
                   className="w-11 h-11 md:w-10 md:h-10 rounded-full border border-white/10 flex items-center justify-center text-white/60 hover:text-white hover:border-white transition-all min-h-[44px] min-w-[44px]"
                 >
-                  <span className="material-symbols-outlined text-base md:text-lg">photo_camera</span>
+                  <Camera className="w-4 h-4 md:w-5 md:h-5" />
                 </a>
                 <a
                   href="#"
                   className="w-11 h-11 md:w-10 md:h-10 rounded-full border border-white/10 flex items-center justify-center text-white/60 hover:text-white hover:border-white transition-all min-h-[44px] min-w-[44px]"
                 >
-                  <span className="material-symbols-outlined text-base md:text-lg">share</span>
+                  <Share2 className="w-4 h-4 md:w-5 md:h-5" />
                 </a>
               </div>
             </div>

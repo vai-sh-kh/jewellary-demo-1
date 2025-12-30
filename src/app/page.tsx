@@ -4,6 +4,7 @@ import ProductGrid from "@/components/products/ProductGrid";
 import ScrollAnimation from "@/components/ScrollAnimation";
 import { products, categoryImages } from "@/constants/data";
 import Link from "next/link";
+import { ChevronLeft, ChevronRight, Play, Gem, Truck, CheckCircle, Package } from "lucide-react";
 
 export default function HomePage() {
   const featuredProducts = products.filter((p) => p.featured);
@@ -70,10 +71,10 @@ export default function HomePage() {
                 </div>
                 <div className="hidden md:flex gap-3 md:gap-4">
                   <button className="w-10 h-10 md:w-12 md:h-12 rounded-full border border-white/20 flex items-center justify-center text-white hover:bg-white hover:text-black transition-all min-h-[44px] min-w-[44px]">
-                    <span className="material-symbols-outlined text-lg md:text-xl">arrow_back</span>
+                    <ChevronLeft className="w-5 h-5 md:w-6 md:h-6" />
                   </button>
                   <button className="w-10 h-10 md:w-12 md:h-12 rounded-full border border-white/20 flex items-center justify-center text-white hover:bg-white hover:text-black transition-all min-h-[44px] min-w-[44px]">
-                    <span className="material-symbols-outlined text-lg md:text-xl">arrow_forward</span>
+                    <ChevronRight className="w-5 h-5 md:w-6 md:h-6" />
                   </button>
                 </div>
               </div>
@@ -95,7 +96,7 @@ export default function HomePage() {
                         {category.name}
                       </h3>
                       <p className="text-white/80 text-xs md:text-sm tracking-widest uppercase opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100 flex items-center gap-2">
-                        Shop Collection <span className="material-symbols-outlined text-xs md:text-sm">arrow_forward</span>
+                        Shop Collection <ChevronRight className="w-3 h-3 md:w-4 md:h-4" />
                       </p>
                     </div>
                   </Link>
@@ -118,7 +119,7 @@ export default function HomePage() {
               />
               <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex items-center justify-center">
                 <button className="w-14 h-14 md:w-16 md:h-16 rounded-full bg-white/10 backdrop-blur-sm flex items-center justify-center text-white hover:bg-primary hover:scale-110 transition-all duration-300 min-h-[44px] min-w-[44px]">
-                  <span className="material-symbols-outlined text-2xl md:text-3xl">play_arrow</span>
+                  <Play className="w-8 h-8 md:w-10 md:h-10" />
                 </button>
               </div>
             </ScrollAnimation>
@@ -178,10 +179,12 @@ export default function HomePage() {
           <div className="w-full max-w-[1400px] mx-auto px-4 md:px-6 lg:px-10">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 lg:gap-24">
               {[
-                { icon: "diamond", title: "Ethical Sourcing", description: "We travel the globe to source gemstones with integrity, ensuring every sparkle is conflict-free and environmentally conscious." },
-                { icon: "verified_user", title: "Lifetime Promise", description: "Our commitment to quality is unwavering. We offer a lifetime warranty on craftsmanship for every piece in our collection." },
-                { icon: "local_shipping", title: "Discreet Delivery", description: "Enjoy complimentary insured shipping worldwide. Your luxury experience begins the moment you unbox." },
-              ].map((feature, index) => (
+                { icon: Gem, title: "Ethical Sourcing", description: "We travel the globe to source gemstones with integrity, ensuring every sparkle is conflict-free and environmentally conscious." },
+                { icon: CheckCircle, title: "Lifetime Promise", description: "Our commitment to quality is unwavering. We offer a lifetime warranty on craftsmanship for every piece in our collection." },
+                { icon: Truck, title: "Discreet Delivery", description: "Enjoy complimentary insured shipping worldwide. Your luxury experience begins the moment you unbox." },
+              ].map((feature, index) => {
+                const IconComponent = feature.icon;
+                return (
                 <ScrollAnimation
                   key={index}
                   animation="fadeInUp"
@@ -189,7 +192,7 @@ export default function HomePage() {
                   className="flex flex-col gap-4 md:gap-6 text-center md:text-left group hover:-translate-y-2 transition-transform duration-500"
                 >
                   <div className="w-14 h-14 md:w-16 md:h-16 rounded-full bg-white/5 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-black transition-colors mb-2 mx-auto md:mx-0 min-h-[44px] min-w-[44px]">
-                    <span className={`material-symbols-outlined text-2xl md:text-3xl`}>{feature.icon}</span>
+                    <IconComponent className="w-7 h-7 md:w-8 md:h-8" />
                   </div>
                   <div>
                     <h4 className="text-white font-serif text-xl md:text-2xl italic mb-2 md:mb-3">{feature.title}</h4>
@@ -198,7 +201,8 @@ export default function HomePage() {
                     </p>
                   </div>
                 </ScrollAnimation>
-              ))}
+                );
+              })}
             </div>
           </div>
         </div>

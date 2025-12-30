@@ -1,6 +1,7 @@
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import ScrollAnimation from "@/components/ScrollAnimation";
+import { SlidersHorizontal, ChevronDown, Gem } from "lucide-react";
 
 export default function NewArrivalsPage() {
   return (
@@ -61,16 +62,12 @@ export default function NewArrivalsPage() {
             </span>
             <div className="flex gap-3 md:gap-4">
               <button className="flex items-center gap-2 text-[9px] md:text-[10px] font-bold uppercase tracking-widest text-white hover:text-primary transition-colors min-h-[44px]">
-                <span className="material-symbols-outlined text-sm md:text-[16px]">
-                  tune
-                </span>
+                <SlidersHorizontal className="w-4 h-4 md:w-[16px] md:h-[16px]" />
                 Filter
               </button>
               <button className="flex items-center gap-2 text-[9px] md:text-[10px] font-bold uppercase tracking-widest text-white hover:text-primary transition-colors min-h-[44px]">
                 Sort
-                <span className="material-symbols-outlined text-sm md:text-[16px]">
-                  expand_more
-                </span>
+                <ChevronDown className="w-4 h-4 md:w-[16px] md:h-[16px]" />
               </button>
             </div>
           </div>
@@ -236,9 +233,7 @@ export default function NewArrivalsPage() {
             className="flex flex-col items-center justify-center p-8 border border-white/5 bg-gradient-to-br from-surface-dark to-black md:aspect-[4/5] lg:aspect-auto"
           >
             <div className="mb-8 p-4 rounded-full border border-primary/20 bg-primary/5">
-              <span className="material-symbols-outlined text-[32px] text-primary">
-                diamond
-              </span>
+              <Gem className="w-8 h-8 text-primary" />
             </div>
             <h3 className="font-serif text-3xl italic text-white text-center mb-4">
               Bespoke

@@ -7,6 +7,7 @@ import OrderSummary from "@/components/cart/OrderSummary";
 import ProductCard from "@/components/products/ProductCard";
 import { cartItems, products, orderSummary } from "@/constants/data";
 import { useState } from "react";
+import { MessageCircle, ChevronLeft, ChevronRight, ShoppingCart } from "lucide-react";
 
 export default function CartPage() {
   const [items, setItems] = useState(cartItems);
@@ -46,7 +47,7 @@ export default function CartPage() {
             ))}
             <div className="mt-4 flex items-center gap-4 bg-gradient-to-r from-primary/10 to-transparent border border-primary/20 p-5 rounded-xl">
               <div className="bg-primary/20 p-2 rounded-full">
-                <span className="material-symbols-outlined text-primary text-2xl">support_agent</span>
+                <MessageCircle className="text-primary w-6 h-6" />
               </div>
               <p className="text-sm text-white/90 leading-relaxed">
                 Need assistance?{" "}
@@ -67,10 +68,10 @@ export default function CartPage() {
             <h2 className="text-2xl md:text-3xl text-white font-light">Completing the Look</h2>
             <div className="hidden md:flex gap-2">
               <button className="size-10 rounded-full border border-white/10 flex items-center justify-center text-white/50 hover:bg-white hover:text-background-dark transition-all min-h-[44px] min-w-[44px]">
-                <span className="material-symbols-outlined">arrow_back</span>
+                <ChevronLeft className="w-5 h-5" />
               </button>
               <button className="size-10 rounded-full border border-white/10 flex items-center justify-center text-white/50 hover:bg-white hover:text-background-dark transition-all min-h-[44px] min-w-[44px]">
-                <span className="material-symbols-outlined">arrow_forward</span>
+                <ChevronRight className="w-5 h-5" />
               </button>
             </div>
           </div>
@@ -84,7 +85,7 @@ export default function CartPage() {
                   />
                   <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300"></div>
                   <button className="absolute bottom-4 right-4 bg-white/10 backdrop-blur-md hover:bg-primary text-white p-2 md:p-3 rounded-full transition-all duration-300 opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 min-h-[44px] min-w-[44px] flex items-center justify-center">
-                    <span className="material-symbols-outlined text-lg md:text-xl">add_shopping_cart</span>
+                    <ShoppingCart className="w-5 h-5 md:w-6 md:h-6" />
                   </button>
                 </div>
                 <h3 className="text-white text-base md:text-lg font-medium mb-1 group-hover:text-primary transition-colors">

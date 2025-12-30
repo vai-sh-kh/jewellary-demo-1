@@ -2,6 +2,7 @@ import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import ProductGrid from "@/components/products/ProductGrid";
 import { products } from "@/constants/data";
+import { Heart } from "lucide-react";
 
 export default function FavoritesPage() {
   // In a real app, this would come from user state/context
@@ -24,7 +25,7 @@ export default function FavoritesPage() {
         ) : (
           <div className="flex flex-col items-center justify-center py-24 text-center">
             <div className="w-24 h-24 rounded-full bg-accent-dark/40 flex items-center justify-center mb-6">
-              <span className="material-symbols-outlined text-primary text-5xl">favorite_border</span>
+              <Heart className="text-primary w-12 h-12" />
             </div>
             <h2 className="text-2xl font-light text-white mb-4">No favorites yet</h2>
             <p className="text-text-muted mb-8 max-w-md">

@@ -2,6 +2,7 @@ import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import ScrollAnimation from "@/components/ScrollAnimation";
 import Link from "next/link";
+import { LayoutDashboard, Receipt, Heart, MapPin, User, LogOut, ShoppingBag, CreditCard, X, Plus, Edit, Lock } from "lucide-react";
 
 export default function ProfilePage() {
   return (
@@ -25,7 +26,7 @@ export default function ProfilePage() {
                   className="flex items-center justify-between w-full px-3 md:px-4 py-2.5 md:py-3 bg-surface-dark border-l-2 border-primary text-white min-h-[44px]"
                 >
                   <span className="text-[10px] md:text-xs font-bold uppercase tracking-widest">Dashboard</span>
-                  <span className="material-symbols-outlined text-base md:text-[18px]">dashboard</span>
+                  <LayoutDashboard className="w-4 h-4 md:w-[18px] md:h-[18px]" />
                 </Link>
               </ScrollAnimation>
               <ScrollAnimation animation="fadeInLeft" delay={150}>
@@ -34,7 +35,7 @@ export default function ProfilePage() {
                   className="flex items-center justify-between w-full px-3 md:px-4 py-2.5 md:py-3 text-white/60 hover:text-white hover:bg-surface-dark/50 transition-colors border-l-2 border-transparent hover:border-white/20 min-h-[44px]"
                 >
                   <span className="text-[10px] md:text-xs font-bold uppercase tracking-widest">Order History</span>
-                  <span className="material-symbols-outlined text-base md:text-[18px]">receipt_long</span>
+                  <Receipt className="w-4 h-4 md:w-[18px] md:h-[18px]" />
                 </Link>
               </ScrollAnimation>
               <ScrollAnimation animation="fadeInLeft" delay={200}>
@@ -43,7 +44,7 @@ export default function ProfilePage() {
                   className="flex items-center justify-between w-full px-3 md:px-4 py-2.5 md:py-3 text-white/60 hover:text-white hover:bg-surface-dark/50 transition-colors border-l-2 border-transparent hover:border-white/20 min-h-[44px]"
                 >
                   <span className="text-[10px] md:text-xs font-bold uppercase tracking-widest">Wishlist</span>
-                  <span className="material-symbols-outlined text-base md:text-[18px]">favorite</span>
+                  <Heart className="w-4 h-4 md:w-[18px] md:h-[18px]" />
                 </Link>
               </ScrollAnimation>
               <ScrollAnimation animation="fadeInLeft" delay={250}>
@@ -52,7 +53,7 @@ export default function ProfilePage() {
                   className="flex items-center justify-between w-full px-3 md:px-4 py-2.5 md:py-3 text-white/60 hover:text-white hover:bg-surface-dark/50 transition-colors border-l-2 border-transparent hover:border-white/20 min-h-[44px]"
                 >
                   <span className="text-[10px] md:text-xs font-bold uppercase tracking-widest">Addresses</span>
-                  <span className="material-symbols-outlined text-base md:text-[18px]">location_on</span>
+                  <MapPin className="w-4 h-4 md:w-[18px] md:h-[18px]" />
                 </Link>
               </ScrollAnimation>
               <ScrollAnimation animation="fadeInLeft" delay={300}>
@@ -61,7 +62,7 @@ export default function ProfilePage() {
                   className="flex items-center justify-between w-full px-3 md:px-4 py-2.5 md:py-3 text-white/60 hover:text-white hover:bg-surface-dark/50 transition-colors border-l-2 border-transparent hover:border-white/20 min-h-[44px]"
                 >
                   <span className="text-[10px] md:text-xs font-bold uppercase tracking-widest">Account Details</span>
-                  <span className="material-symbols-outlined text-base md:text-[18px]">person</span>
+                  <User className="w-4 h-4 md:w-[18px] md:h-[18px]" />
                 </Link>
               </ScrollAnimation>
               <ScrollAnimation animation="fadeInLeft" delay={350}>
@@ -70,7 +71,7 @@ export default function ProfilePage() {
                   className="flex items-center justify-between w-full px-3 md:px-4 py-2.5 md:py-3 text-white/60 hover:text-white hover:bg-surface-dark/50 transition-colors border-l-2 border-transparent hover:border-white/20 mt-6 md:mt-8 min-h-[44px]"
                 >
                   <span className="text-[10px] md:text-xs font-bold uppercase tracking-widest">Log Out</span>
-                  <span className="material-symbols-outlined text-base md:text-[18px]">logout</span>
+                  <LogOut className="w-4 h-4 md:w-[18px] md:h-[18px]" />
                 </Link>
               </ScrollAnimation>
             </div>
@@ -79,10 +80,12 @@ export default function ProfilePage() {
             <ScrollAnimation animation="fadeInUp" delay={100}>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 {[
-                  { label: "Total Orders", value: "12", icon: "shopping_bag", link: "View History" },
-                  { label: "Wishlist Items", value: "5", icon: "favorite", link: "View Saved" },
-                  { label: "Membership Tier", value: "Gold Elite", icon: "card_membership", link: "View Benefits" },
-                ].map((stat, index) => (
+                  { label: "Total Orders", value: "12", icon: ShoppingBag, link: "View History" },
+                  { label: "Wishlist Items", value: "5", icon: Heart, link: "View Saved" },
+                  { label: "Membership Tier", value: "Gold Elite", icon: CreditCard, link: "View Benefits" },
+                ].map((stat, index) => {
+                  const IconComponent = stat.icon;
+                  return (
                   <ScrollAnimation
                     key={index}
                     animation="scaleIn"
@@ -90,7 +93,7 @@ export default function ProfilePage() {
                     className="bg-surface-dark p-6 border border-white/5 relative overflow-hidden group"
                   >
                     <div className="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
-                      <span className={`material-symbols-outlined text-[64px] text-primary`}>{stat.icon}</span>
+                      <IconComponent className="text-[64px] text-primary" />
                     </div>
                     <p className="text-xs font-bold uppercase tracking-widest text-white/60 mb-2">{stat.label}</p>
                     <p className="font-serif text-4xl text-white">{stat.value}</p>
@@ -101,7 +104,8 @@ export default function ProfilePage() {
                       {stat.link}
                     </Link>
                   </ScrollAnimation>
-                ))}
+                  );
+                })}
               </div>
             </ScrollAnimation>
             <ScrollAnimation animation="fadeInUp" delay={400}>
@@ -231,7 +235,7 @@ export default function ProfilePage() {
                     >
                       <div className="aspect-[4/5] bg-surface-dark overflow-hidden mb-3 relative">
                         <button className="absolute top-2 right-2 z-10 text-white/50 hover:text-red-500 transition-colors bg-black/20 backdrop-blur-sm p-1.5 rounded-full">
-                          <span className="material-symbols-outlined text-[16px] fill-1">close</span>
+                          <X className="w-4 h-4" />
                         </button>
                         <img
                           alt={item.title}
@@ -253,9 +257,7 @@ export default function ProfilePage() {
                       href="/products"
                       className="group relative flex flex-col h-full border border-dashed border-white/20 hover:border-primary/50 transition-colors bg-surface-dark/30 hover:bg-surface-dark p-4 items-center justify-center text-center aspect-[4/5] md:aspect-auto"
                     >
-                      <span className="material-symbols-outlined text-4xl text-white/20 group-hover:text-primary/80 transition-colors mb-2">
-                        add
-                      </span>
+                      <Plus className="w-10 h-10 text-white/20 group-hover:text-primary/80 transition-colors mb-2" />
                       <span className="text-xs font-bold uppercase tracking-widest text-white/40 group-hover:text-white transition-colors">
                         Discover More
                       </span>
@@ -270,7 +272,7 @@ export default function ProfilePage() {
                   <div className="flex items-center justify-between mb-6 border-b border-white/10 pb-4">
                     <h2 className="font-serif text-2xl text-white">Personal Info</h2>
                     <button className="text-white/40 hover:text-primary transition-colors">
-                      <span className="material-symbols-outlined text-[18px]">edit</span>
+                      <Edit className="w-[18px] h-[18px]" />
                     </button>
                   </div>
                   <div className="bg-surface-dark border border-white/5 p-6 space-y-4">
@@ -360,7 +362,7 @@ export default function ProfilePage() {
               <section className="mt-8 bg-surface-dark/50 border border-white/5 p-6 rounded-sm flex flex-col md:flex-row items-center justify-between gap-6">
                 <div className="flex items-center gap-4">
                   <div className="p-3 bg-white/5 rounded-full">
-                    <span className="material-symbols-outlined text-white/60">lock</span>
+                    <Lock className="w-5 h-5 text-white/60" />
                   </div>
                   <div>
                     <h4 className="text-sm font-bold text-white uppercase tracking-wider">Account Security</h4>

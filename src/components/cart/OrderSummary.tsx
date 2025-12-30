@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { orderSummary } from "@/constants/data";
+import { ChevronDown, Lock, CreditCard, Wallet } from "lucide-react";
 
 interface OrderSummaryProps {
   subtotal: number;
@@ -37,9 +38,7 @@ export default function OrderSummary({ subtotal, tax, shipping = 0 }: OrderSumma
           <details className="group/promo">
             <summary className="flex items-center justify-between cursor-pointer list-none text-xs md:text-sm text-text-muted hover:text-white transition-colors select-none min-h-[44px]">
               <span className="font-medium tracking-wide">Do you have a promo code?</span>
-              <span className="material-symbols-outlined transition-transform duration-300 group-open/promo:rotate-180 text-white/50 text-lg md:text-xl">
-                expand_more
-              </span>
+              <ChevronDown className="transition-transform duration-300 group-open/promo:rotate-180 text-white/50 w-5 h-5 md:w-6 md:h-6" />
             </summary>
             <div className="mt-3 md:mt-4 flex gap-2">
               <input
@@ -63,19 +62,13 @@ export default function OrderSummary({ subtotal, tax, shipping = 0 }: OrderSumma
           </div>
         </div>
         <button className="group w-full bg-gradient-to-r from-primary to-primary-hover text-background-dark font-bold py-3 md:py-4 rounded-lg md:rounded-xl flex items-center justify-center gap-2 md:gap-3 transition-all duration-300 hover:shadow-lg hover:shadow-primary/20 hover:scale-[1.01] active:scale-[0.99] mb-4 md:mb-6 min-h-[44px] text-sm md:text-base">
-          <span className="material-symbols-outlined text-lg md:text-[20px] transition-transform group-hover:scale-110">lock</span>
+          <Lock className="w-5 h-5 md:w-[20px] md:h-[20px] transition-transform group-hover:scale-110" />
           <span className="tracking-wide">Proceed to Checkout</span>
         </button>
         <div className="flex justify-center gap-6 mt-8 border-t border-white/5 pt-6">
-          <span className="material-symbols-outlined text-white/20 text-3xl hover:text-white/40 transition-colors cursor-help" title="Visa">
-            credit_card
-          </span>
-          <span className="material-symbols-outlined text-white/20 text-3xl hover:text-white/40 transition-colors cursor-help" title="Mastercard">
-            payments
-          </span>
-          <span className="material-symbols-outlined text-white/20 text-3xl hover:text-white/40 transition-colors cursor-help" title="Paypal">
-            account_balance_wallet
-          </span>
+          <CreditCard className="text-white/20 w-8 h-8 hover:text-white/40 transition-colors cursor-help" title="Visa" />
+          <CreditCard className="text-white/20 w-8 h-8 hover:text-white/40 transition-colors cursor-help" title="Mastercard" />
+          <Wallet className="text-white/20 w-8 h-8 hover:text-white/40 transition-colors cursor-help" title="Paypal" />
         </div>
       </div>
     </div>

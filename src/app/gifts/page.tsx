@@ -2,6 +2,7 @@ import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import ScrollAnimation from "@/components/ScrollAnimation";
 import Link from "next/link";
+import { ChevronDown, X, Plus } from "lucide-react";
 
 export default function GiftsPage() {
   return (
@@ -41,9 +42,7 @@ export default function GiftsPage() {
             </Link>
             <button className="group flex items-center gap-2 text-[10px] md:text-xs font-bold uppercase tracking-widest text-white hover:text-primary transition-colors min-h-[44px]">
               <span>Sort by: Date Added</span>
-              <span className="material-symbols-outlined text-base md:text-[18px] text-white/50 group-hover:text-primary transition-colors">
-                expand_more
-              </span>
+              <ChevronDown className="w-4 h-4 md:w-[18px] md:h-[18px] text-white/50 group-hover:text-primary transition-colors" />
             </button>
           </div>
         </div>
@@ -99,9 +98,7 @@ export default function GiftsPage() {
                   className="absolute top-4 right-4 z-20 min-h-[44px] min-w-[44px] flex items-center justify-center bg-black/40 backdrop-blur-md rounded-full text-white hover:bg-white hover:text-black transition-all border border-white/10"
                   title="Remove from wishlist"
                 >
-                  <span className="material-symbols-outlined text-sm md:text-[16px]">
-                    close
-                  </span>
+                  <X className="w-4 h-4 md:w-[16px] md:h-[16px]" />
                 </button>
                 {item.badge && (
                   <div className="absolute left-0 top-4 md:top-6 z-20 pointer-events-none">
@@ -138,9 +135,7 @@ export default function GiftsPage() {
             delay={600}
             className="flex flex-col items-center justify-center p-6 md:p-8 border border-white/5 bg-white/5 aspect-[4/5] group hover:border-primary/30 transition-colors cursor-pointer"
           >
-            <span className="material-symbols-outlined text-2xl md:text-[32px] text-white/30 group-hover:text-primary transition-colors mb-3 md:mb-4">
-              add
-            </span>
+            <Plus className="w-8 h-8 md:w-[32px] md:h-[32px] text-white/30 group-hover:text-primary transition-colors mb-3 md:mb-4" />
             <h3 className="font-serif text-xl md:text-2xl italic text-white text-center mb-2">
               Discover More
             </h3>

@@ -2,6 +2,7 @@
 
 import { CartItem as CartItemType } from "@/constants/data";
 import { useState } from "react";
+import { Minus, Plus, Trash2 } from "lucide-react";
 
 interface CartItemProps {
   item: CartItemType;
@@ -58,7 +59,7 @@ export default function CartItem({ item, onUpdateQuantity, onRemove }: CartItemP
                 onClick={handleDecrease}
                 className="size-10 md:size-9 rounded-full flex items-center justify-center text-white/50 hover:bg-white/10 hover:text-white transition-all active:scale-90 min-h-[44px] min-w-[44px]"
               >
-                <span className="material-symbols-outlined text-base">remove</span>
+                <Minus className="w-4 h-4" />
               </button>
               <input
                 className="w-12 bg-transparent border-none text-center text-white p-0 text-sm md:text-base font-medium focus:ring-0 cursor-default"
@@ -70,7 +71,7 @@ export default function CartItem({ item, onUpdateQuantity, onRemove }: CartItemP
                 onClick={handleIncrease}
                 className="size-10 md:size-9 rounded-full flex items-center justify-center text-background-dark bg-white hover:bg-primary transition-all shadow-lg hover:shadow-primary/20 active:scale-90 transform min-h-[44px] min-w-[44px]"
               >
-                <span className="material-symbols-outlined text-base font-bold">add</span>
+                <Plus className="w-4 h-4 font-bold" />
               </button>
             </div>
           </div>
@@ -80,9 +81,7 @@ export default function CartItem({ item, onUpdateQuantity, onRemove }: CartItemP
               onClick={handleRemove}
               className="flex items-center gap-2 text-[10px] md:text-xs font-medium tracking-wide text-red-400/60 hover:text-red-400 transition-colors group/delete px-3 py-2 rounded-lg hover:bg-red-400/10 min-h-[44px]"
             >
-              <span className="material-symbols-outlined text-base md:text-[18px] transition-transform duration-300 group-hover/delete:rotate-12 group-hover/delete:scale-110">
-                delete
-              </span>
+              <Trash2 className="w-4 h-4 md:w-[18px] md:h-[18px] transition-transform duration-300 group-hover/delete:rotate-12 group-hover/delete:scale-110" />
               <span>Remove Item</span>
             </button>
           </div>

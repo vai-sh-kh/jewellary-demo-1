@@ -5,6 +5,7 @@ import Footer from "@/components/layout/Footer";
 import ProductGrid from "@/components/products/ProductGrid";
 import { products } from "@/constants/data";
 import { useState } from "react";
+import { ChevronDown, SlidersHorizontal } from "lucide-react";
 
 export default function ProductsPage() {
   const [visibleCount, setVisibleCount] = useState(6);
@@ -46,7 +47,7 @@ export default function ProductsPage() {
             <div className="hidden md:flex items-center gap-6 lg:gap-10">
               <div className="group relative h-full flex items-center">
                 <button className="flex items-center gap-1 text-[10px] md:text-xs font-bold uppercase tracking-widest text-text-gold hover:text-white transition-colors min-h-[44px]">
-                  Category <span className="material-symbols-outlined text-sm md:text-[16px]">expand_more</span>
+                  Category <ChevronDown className="w-4 h-4 md:w-[16px] md:h-[16px] inline" />
                 </button>
                 <div className="absolute left-0 top-full pt-1 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
                   <div className="w-56 rounded border border-[#483a23] bg-[#1a150d] p-4 shadow-2xl">
@@ -80,7 +81,7 @@ export default function ProductsPage() {
               </div>
               <div className="group relative h-full flex items-center">
                 <button className="flex items-center gap-1 text-xs font-bold uppercase tracking-widest text-text-gold hover:text-white transition-colors">
-                  Material <span className="material-symbols-outlined text-[16px]">expand_more</span>
+                  Material <ChevronDown className="w-4 h-4 inline" />
                 </button>
                 <div className="absolute left-0 top-full pt-1 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
                   <div className="w-56 rounded border border-[#483a23] bg-[#1a150d] p-4 shadow-2xl">
@@ -115,7 +116,7 @@ export default function ProductsPage() {
               </div>
               <div className="group relative h-full flex items-center">
                 <button className="flex items-center gap-1 text-xs font-bold uppercase tracking-widest text-text-gold hover:text-white transition-colors">
-                  Price <span className="material-symbols-outlined text-[16px]">expand_more</span>
+                  Price <ChevronDown className="w-4 h-4 inline" />
                 </button>
                 <div className="absolute left-0 top-full pt-1 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
                   <div className="w-64 rounded border border-[#483a23] bg-[#1a150d] p-6 shadow-2xl">
@@ -132,7 +133,7 @@ export default function ProductsPage() {
               </div>
             </div>
             <button className="flex md:hidden items-center gap-2 text-xs font-bold uppercase tracking-widest text-white min-h-[44px]">
-              <span className="material-symbols-outlined text-lg">tune</span> Filters
+              <SlidersHorizontal className="w-5 h-5 inline" /> Filters
             </button>
             <div className="flex items-center gap-6">
               <span className="hidden text-xs font-medium text-text-gold/70 lg:block">
@@ -196,7 +197,7 @@ export default function ProductsPage() {
                 className="group flex items-center gap-2 md:gap-3 rounded-full border border-text-gold/30 bg-transparent px-6 md:px-10 py-3 md:py-4 text-[10px] md:text-xs font-bold uppercase tracking-widest text-white hover:border-primary hover:bg-primary hover:text-white transition-all min-h-[44px]"
               >
                 Load More Products
-                <span className="material-symbols-outlined text-base md:text-[18px] group-hover:animate-bounce">expand_more</span>
+                <ChevronDown className="w-4 h-4 md:w-[18px] md:h-[18px] group-hover:animate-bounce" />
               </button>
             </div>
           )}

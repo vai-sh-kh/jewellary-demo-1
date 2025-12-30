@@ -3,6 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { Product } from "@/constants/data";
+import { Heart } from "lucide-react";
 
 interface ProductCardProps {
   product: Product;
@@ -16,7 +17,7 @@ export default function ProductCard({ product, variant = "default" }: ProductCar
         <div className="relative w-full bg-background-card aspect-[4/5] overflow-hidden mb-6">
           <div className="absolute top-4 right-4 z-20 opacity-0 group-hover:opacity-100 transition-opacity">
             <button className="bg-white text-black p-2 md:p-3 rounded-full hover:bg-primary hover:text-white transition-colors shadow-lg min-h-[44px] min-w-[44px] flex items-center justify-center">
-              <span className="material-symbols-outlined text-base md:text-lg block">favorite</span>
+              <Heart className="w-4 h-4 md:w-5 md:h-5" />
             </button>
           </div>
           <div
@@ -59,7 +60,7 @@ export default function ProductCard({ product, variant = "default" }: ProductCar
           </button>
         </div>
         <button className="absolute right-4 top-4 flex min-h-[44px] min-w-[44px] items-center justify-center rounded-full bg-black/20 text-white backdrop-blur-md hover:bg-primary transition-colors opacity-0 group-hover:opacity-100 duration-300">
-          <span className="material-symbols-outlined text-lg md:text-[20px] fill-1">favorite</span>
+          <Heart className="w-5 h-5 md:w-[20px] md:h-[20px]" />
         </button>
       </div>
       <div className="flex flex-col gap-1">

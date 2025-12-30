@@ -1,6 +1,7 @@
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import Link from "next/link";
+import { UserCircle, User, Receipt, Heart, Home, Settings, ChevronRight } from "lucide-react";
 
 export default function AccountPage() {
   return (
@@ -21,7 +22,7 @@ export default function AccountPage() {
             <div className="bg-accent-dark/40 rounded-2xl p-6 border border-white/5 sticky top-32">
               <div className="flex items-center gap-4 mb-6 pb-6 border-b border-white/5">
                 <div className="w-16 h-16 rounded-full bg-primary/20 flex items-center justify-center">
-                  <span className="material-symbols-outlined text-primary text-3xl">account_circle</span>
+                  <UserCircle className="text-primary w-8 h-8" />
                 </div>
                 <div>
                   <h3 className="text-white font-medium">John Doe</h3>
@@ -33,35 +34,35 @@ export default function AccountPage() {
                   href="/account"
                   className="flex items-center gap-3 px-4 py-3 rounded-lg bg-primary/10 text-primary font-medium transition-colors"
                 >
-                  <span className="material-symbols-outlined text-xl">person</span>
+                  <User className="w-5 h-5" />
                   <span>Profile</span>
                 </Link>
                 <Link
                   href="/account/orders"
                   className="flex items-center gap-3 px-4 py-3 rounded-lg text-white/80 hover:bg-white/5 hover:text-white transition-colors"
                 >
-                  <span className="material-symbols-outlined text-xl">receipt_long</span>
+                  <Receipt className="w-5 h-5" />
                   <span>Orders</span>
                 </Link>
                 <Link
                   href="/favorites"
                   className="flex items-center gap-3 px-4 py-3 rounded-lg text-white/80 hover:bg-white/5 hover:text-white transition-colors"
                 >
-                  <span className="material-symbols-outlined text-xl">favorite</span>
+                  <Heart className="w-5 h-5" />
                   <span>Favorites</span>
                 </Link>
                 <Link
                   href="/account/addresses"
                   className="flex items-center gap-3 px-4 py-3 rounded-lg text-white/80 hover:bg-white/5 hover:text-white transition-colors"
                 >
-                  <span className="material-symbols-outlined text-xl">home</span>
+                  <Home className="w-5 h-5" />
                   <span>Addresses</span>
                 </Link>
                 <Link
                   href="/account/settings"
                   className="flex items-center gap-3 px-4 py-3 rounded-lg text-white/80 hover:bg-white/5 hover:text-white transition-colors"
                 >
-                  <span className="material-symbols-outlined text-xl">settings</span>
+                  <Settings className="w-5 h-5" />
                   <span>Settings</span>
                 </Link>
               </nav>
@@ -154,7 +155,7 @@ export default function AccountPage() {
                 className="mt-6 inline-flex items-center gap-2 text-primary hover:text-primary-hover transition-colors"
               >
                 <span>View All Orders</span>
-                <span className="material-symbols-outlined text-lg">arrow_forward</span>
+                <ChevronRight className="w-5 h-5" />
               </Link>
             </div>
           </div>
