@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Luxury Jewelry Cart</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#ec9c13",
+              "primary-hover": "#d68b0e",
+              "background-light": "#f8f7f6",
+              "background-dark": "#221b10",
+              "accent-dark": "#2d2416",
+              "text-muted": "#c9b592",
+            },
+            fontFamily: {
+              "display": ["Manrope", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "2xl": "1rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-gray-900 dark:text-white antialiased min-h-screen flex flex-col selection:bg-primary selection:text-white">
+<header class="w-full border-b border-[#483a23] bg-background-dark/95 backdrop-blur-sm sticky top-0 z-50 transition-all duration-300">
+<div class="max-w-screen-xl mx-auto px-6 py-4">
+<div class="flex items-center justify-between whitespace-nowrap">
+<div class="flex items-center gap-12">
+<div class="flex items-center gap-3 text-white cursor-pointer group">
+<span class="material-symbols-outlined text-primary text-3xl transition-transform duration-500 group-hover:rotate-45">diamond</span>
+<h2 class="text-white text-xl font-bold tracking-wide">LUXE</h2>
+</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-white/80 hover:text-primary transition-colors text-sm font-medium tracking-wide relative after:content-[''] after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-px after:bg-primary after:transition-all hover:after:w-full" href="#">Collections</a>
+<a class="text-white/80 hover:text-primary transition-colors text-sm font-medium tracking-wide relative after:content-[''] after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-px after:bg-primary after:transition-all hover:after:w-full" href="#">New Arrivals</a>
+<a class="text-white/80 hover:text-primary transition-colors text-sm font-medium tracking-wide relative after:content-[''] after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-px after:bg-primary after:transition-all hover:after:w-full" href="#">Gifts</a>
+<a class="text-white/80 hover:text-primary transition-colors text-sm font-medium tracking-wide relative after:content-[''] after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-px after:bg-primary after:transition-all hover:after:w-full" href="#">Bespoke</a>
+</nav>
+</div>
+<div class="flex items-center gap-6">
+<div class="hidden lg:flex items-center bg-[#483a23]/30 hover:bg-[#483a23]/50 rounded-full px-4 py-2 w-64 border border-transparent focus-within:border-primary/50 transition-all duration-300">
+<span class="material-symbols-outlined text-text-muted text-xl">search</span>
+<input class="bg-transparent border-none focus:ring-0 text-sm text-white placeholder:text-text-muted w-full ml-2" placeholder="Search"/>
+</div>
+<div class="flex items-center gap-2">
+<button class="flex items-center justify-center size-10 rounded-full hover:bg-white/10 text-white transition-colors">
+<span class="material-symbols-outlined text-[22px]">favorite</span>
+</button>
+<button class="flex items-center justify-center size-10 rounded-full hover:bg-white/10 text-white transition-colors relative">
+<span class="material-symbols-outlined text-[22px]">shopping_bag</span>
+<span class="absolute top-2 right-2 size-2 bg-primary rounded-full ring-2 ring-background-dark"></span>
+</button>
+<button class="flex items-center justify-center size-10 rounded-full hover:bg-white/10 text-white transition-colors">
+<span class="material-symbols-outlined text-[22px]">account_circle</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</header>
+<main class="flex-grow w-full max-w-screen-xl mx-auto px-6 py-12">
+<div class="mb-12 border-b border-white/5 pb-8">
+<h1 class="text-4xl md:text-5xl font-light text-white mb-3 tracking-tight">Shopping Bag</h1>
+<p class="text-text-muted flex items-center gap-2">
+<span class="size-1.5 rounded-full bg-primary inline-block"></span>
+                3 items currently in your bag
+            </p>
+</div>
+<div class="flex flex-col lg:flex-row gap-16">
+<div class="flex-1 flex flex-col gap-8">
+<div class="group flex flex-col md:flex-row items-stretch gap-8 p-6 bg-accent-dark/40 hover:bg-accent-dark/60 border border-white/5 hover:border-primary/20 rounded-2xl transition-all duration-500 relative overflow-hidden shadow-sm hover:shadow-xl hover:shadow-black/20">
+<div class="flex-shrink-0 relative overflow-hidden rounded-xl w-full md:w-56 aspect-[4/5] md:aspect-square bg-white/5">
+<div class="absolute inset-0 bg-center bg-cover transition-transform duration-700 group-hover:scale-110" data-alt="Close up of a sparkling diamond pendant on a dark background" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDM2AFGrVVRq2ZXrjISpNIXIZ5SoCk0GGXzJYO0gUfbMpIQ59_e0_Mh5T5x98Ek9vX011yyk6i8RibyRa-6Y0X_9FO9QjJ0CAIeItHM2XUsUrtMOuy-99MbUCdMrA92MnLcqkPqOTV00pi5b-m-yxwxuavXkPoZH2JHMB-2kWh4Fqdn9cA95tl-7Jd2jrCLJO_TELa0Aty_qTK20s6C6FWHI7DlRgYimUh_2sM28YI0W9XNKUfxkTXS7g93EU4FkkMQFk8z9ZYbQvg");'></div>
+<div class="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-500"></div>
+</div>
+<div class="flex-1 flex flex-col justify-between z-10">
+<div class="flex justify-between items-start gap-4">
+<div>
+<h3 class="text-2xl text-white font-medium leading-tight mb-2 tracking-wide group-hover:text-primary transition-colors duration-300">Celestial Diamond Pendant</h3>
+<p class="text-text-muted text-sm mb-1.5 font-medium">18k Gold | 0.5ct Diamond</p>
+<p class="text-white/40 text-xs tracking-widest uppercase">Ref. 0012458</p>
+</div>
+<p class="md:hidden text-white font-medium text-lg">$2,400</p>
+</div>
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mt-8 md:mt-0">
+<div class="flex flex-col gap-3">
+<span class="text-[10px] text-text-muted uppercase tracking-[0.2em] font-bold">Quantity</span>
+<div class="flex items-center bg-background-dark border border-white/10 rounded-full p-1 w-fit group-hover:border-primary/40 transition-colors duration-300">
+<button class="size-9 rounded-full flex items-center justify-center text-white/50 hover:bg-white/10 hover:text-white transition-all active:scale-90">
+<span class="material-symbols-outlined text-base">remove</span>
+</button>
+<input class="w-12 bg-transparent border-none text-center text-white p-0 text-base font-medium focus:ring-0 cursor-default" readonly="" type="number" value="1"/>
+<button class="size-9 rounded-full flex items-center justify-center text-background-dark bg-white hover:bg-primary transition-all shadow-lg hover:shadow-primary/20 active:scale-90 transform">
+<span class="material-symbols-outlined text-base font-bold">add</span>
+</button>
+</div>
+</div>
+<div class="flex flex-row md:flex-col items-center md:items-end justify-between md:justify-end gap-2 md:gap-2">
+<p class="hidden md:block text-2xl text-white font-light mb-1">$2,400</p>
+<button class="flex items-center gap-2 text-xs font-medium tracking-wide text-red-400/60 hover:text-red-400 transition-colors group/delete px-3 py-2 rounded-lg hover:bg-red-400/10">
+<span class="material-symbols-outlined text-[18px] transition-transform duration-300 group-hover/delete:rotate-12 group-hover/delete:scale-110">delete</span>
+<span>Remove Item</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<div class="group flex flex-col md:flex-row items-stretch gap-8 p-6 bg-accent-dark/40 hover:bg-accent-dark/60 border border-white/5 hover:border-primary/20 rounded-2xl transition-all duration-500 relative overflow-hidden shadow-sm hover:shadow-xl hover:shadow-black/20">
+<div class="flex-shrink-0 relative overflow-hidden rounded-xl w-full md:w-56 aspect-[4/5] md:aspect-square bg-white/5">
+<div class="absolute inset-0 bg-center bg-cover transition-transform duration-700 group-hover:scale-110" data-alt="Black onyx signet ring on a marble surface" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuD8TNisNIi5eqTcog6s9W5q11bZRGde20Fa4dYaH46f6f3rWDJUdaCiUEgXpRIfQxsherkZwGoONPWfiHc4DkizxZVZQTo99Xzb9TpKNtOMlDMl0XXloO4Pr2GTzc8b4MAPJAZsYTKVbqUXId7n1_E7aG44HZQ3rmm1rhOkKg5Exo_fKsjsGN06z6dT1CEE-aVYptC6n9OtyOiiq3_76szT5q9u2IAj1_CG3JSyEjyvJzQnAlVBJwB-GYE4w3NN6CWL6YV6BprLaDY");'></div>
+<div class="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-500"></div>
+</div>
+<div class="flex-1 flex flex-col justify-between z-10">
+<div class="flex justify-between items-start gap-4">
+<div>
+<h3 class="text-2xl text-white font-medium leading-tight mb-2 tracking-wide group-hover:text-primary transition-colors duration-300">Onyx Signet Ring</h3>
+<p class="text-text-muted text-sm mb-1.5 font-medium">Platinum | Black Onyx</p>
+<p class="text-white/40 text-xs tracking-widest uppercase">Ref. 0098231</p>
+</div>
+<p class="md:hidden text-white font-medium text-lg">$1,850</p>
+</div>
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mt-8 md:mt-0">
+<div class="flex flex-col gap-3">
+<span class="text-[10px] text-text-muted uppercase tracking-[0.2em] font-bold">Quantity</span>
+<div class="flex items-center bg-background-dark border border-white/10 rounded-full p-1 w-fit group-hover:border-primary/40 transition-colors duration-300">
+<button class="size-9 rounded-full flex items-center justify-center text-white/50 hover:bg-white/10 hover:text-white transition-all active:scale-90">
+<span class="material-symbols-outlined text-base">remove</span>
+</button>
+<input class="w-12 bg-transparent border-none text-center text-white p-0 text-base font-medium focus:ring-0 cursor-default" readonly="" type="number" value="1"/>
+<button class="size-9 rounded-full flex items-center justify-center text-background-dark bg-white hover:bg-primary transition-all shadow-lg hover:shadow-primary/20 active:scale-90 transform">
+<span class="material-symbols-outlined text-base font-bold">add</span>
+</button>
+</div>
+</div>
+<div class="flex flex-row md:flex-col items-center md:items-end justify-between md:justify-end gap-2 md:gap-2">
+<p class="hidden md:block text-2xl text-white font-light mb-1">$1,850</p>
+<button class="flex items-center gap-2 text-xs font-medium tracking-wide text-red-400/60 hover:text-red-400 transition-colors group/delete px-3 py-2 rounded-lg hover:bg-red-400/10">
+<span class="material-symbols-outlined text-[18px] transition-transform duration-300 group-hover/delete:rotate-12 group-hover/delete:scale-110">delete</span>
+<span>Remove Item</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<div class="group flex flex-col md:flex-row items-stretch gap-8 p-6 bg-accent-dark/40 hover:bg-accent-dark/60 border border-white/5 hover:border-primary/20 rounded-2xl transition-all duration-500 relative overflow-hidden shadow-sm hover:shadow-xl hover:shadow-black/20">
+<div class="flex-shrink-0 relative overflow-hidden rounded-xl w-full md:w-56 aspect-[4/5] md:aspect-square bg-white/5">
+<div class="absolute inset-0 bg-center bg-cover transition-transform duration-700 group-hover:scale-110" data-alt="Rose gold eternity band with pave diamonds" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAsEC1RF45EZ8jk6dD_CSPCcV04tFgahLDfnJeCkoB0WFoPB_l7Q0_9wZpj7UeDfEgxFgGY6TlcIvionbLWP8rKrxbRCUfVaINe_FDLKMnIHepGsARGV6yEIlGpHLcGzh-4oRnutkYV-cCY-t0ryMETAvax-aTmBiJ0r0zqRWJOQzxcYwZmnAn-ESUHItyaRoBcx4RNPkTg3zXI7DHYbQPNHyP9QeCSvKm9rRmGIMq0OBVp7O6a1TE5U3aL9LRpLgQzfP-_8rZOUEM");'></div>
+<div class="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-500"></div>
+</div>
+<div class="flex-1 flex flex-col justify-between z-10">
+<div class="flex justify-between items-start gap-4">
+<div>
+<h3 class="text-2xl text-white font-medium leading-tight mb-2 tracking-wide group-hover:text-primary transition-colors duration-300">Eternity Band</h3>
+<p class="text-text-muted text-sm mb-1.5 font-medium">Rose Gold | Pave Diamonds</p>
+<p class="text-white/40 text-xs tracking-widest uppercase">Ref. 0044512</p>
+</div>
+<p class="md:hidden text-white font-medium text-lg">$3,200</p>
+</div>
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mt-8 md:mt-0">
+<div class="flex flex-col gap-3">
+<span class="text-[10px] text-text-muted uppercase tracking-[0.2em] font-bold">Quantity</span>
+<div class="flex items-center bg-background-dark border border-white/10 rounded-full p-1 w-fit group-hover:border-primary/40 transition-colors duration-300">
+<button class="size-9 rounded-full flex items-center justify-center text-white/50 hover:bg-white/10 hover:text-white transition-all active:scale-90">
+<span class="material-symbols-outlined text-base">remove</span>
+</button>
+<input class="w-12 bg-transparent border-none text-center text-white p-0 text-base font-medium focus:ring-0 cursor-default" readonly="" type="number" value="1"/>
+<button class="size-9 rounded-full flex items-center justify-center text-background-dark bg-white hover:bg-primary transition-all shadow-lg hover:shadow-primary/20 active:scale-90 transform">
+<span class="material-symbols-outlined text-base font-bold">add</span>
+</button>
+</div>
+</div>
+<div class="flex flex-row md:flex-col items-center md:items-end justify-between md:justify-end gap-2 md:gap-2">
+<p class="hidden md:block text-2xl text-white font-light mb-1">$3,200</p>
+<button class="flex items-center gap-2 text-xs font-medium tracking-wide text-red-400/60 hover:text-red-400 transition-colors group/delete px-3 py-2 rounded-lg hover:bg-red-400/10">
+<span class="material-symbols-outlined text-[18px] transition-transform duration-300 group-hover/delete:rotate-12 group-hover/delete:scale-110">delete</span>
+<span>Remove Item</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-4 flex items-center gap-4 bg-gradient-to-r from-primary/10 to-transparent border border-primary/20 p-5 rounded-xl">
+<div class="bg-primary/20 p-2 rounded-full">
+<span class="material-symbols-outlined text-primary text-2xl">support_agent</span>
+</div>
+<p class="text-sm text-white/90 leading-relaxed">
+                        Need assistance? <a class="text-primary font-medium underline decoration-primary/50 hover:decoration-primary underline-offset-2 transition-all" href="#">Contact our Concierge</a> for personal sizing advice.
+                    </p>
+</div>
+</div>
+<div class="w-full lg:w-[420px] flex-shrink-0">
+<div class="bg-accent-dark/80 backdrop-blur-md rounded-2xl p-8 sticky top-32 border border-white/5 shadow-2xl">
+<h2 class="text-2xl font-light text-white mb-8">Order Summary</h2>
+<div class="space-y-5 mb-8">
+<div class="flex justify-between text-sm">
+<span class="text-white/60">Subtotal</span>
+<span class="text-white font-medium tracking-wide">$7,450</span>
+</div>
+<div class="flex justify-between text-sm">
+<span class="text-white/60">Shipping</span>
+<span class="text-primary font-medium">Complimentary</span>
+</div>
+<div class="flex justify-between text-sm">
+<span class="text-white/60">Estimated Tax</span>
+<span class="text-white font-medium tracking-wide">$620</span>
+</div>
+</div>
+<div class="mb-8 pt-6 border-t border-white/5">
+<details class="group/promo">
+<summary class="flex items-center justify-between cursor-pointer list-none text-sm text-text-muted hover:text-white transition-colors select-none">
+<span class="font-medium tracking-wide">Do you have a promo code?</span>
+<span class="material-symbols-outlined transition-transform duration-300 group-open/promo:rotate-180 text-white/50">expand_more</span>
+</summary>
+<div class="mt-4 flex gap-2">
+<input class="flex-1 bg-background-dark/50 border border-white/10 rounded-lg px-4 py-2.5 text-sm text-white placeholder:text-white/20 focus:border-primary/50 focus:ring-1 focus:ring-primary/50 transition-all" placeholder="Enter code" type="text"/>
+<button class="px-5 py-2.5 bg-white/5 hover:bg-white/15 text-white text-sm font-medium rounded-lg transition-colors border border-white/5">Apply</button>
+</div>
+</details>
+</div>
+<div class="flex justify-between items-end mb-8 pt-6 border-t border-white/10">
+<span class="text-lg text-white font-light">Total</span>
+<div class="text-right">
+<span class="text-xs text-text-muted block mb-1 tracking-wider">USD</span>
+<span class="text-4xl font-display font-medium text-white tracking-tight">$8,070</span>
+</div>
+</div>
+<button class="group w-full bg-gradient-to-r from-primary to-primary-hover text-background-dark font-bold py-4 rounded-xl flex items-center justify-center gap-3 transition-all duration-300 hover:shadow-lg hover:shadow-primary/20 hover:scale-[1.01] active:scale-[0.99] mb-6">
+<span class="material-symbols-outlined text-[20px] transition-transform group-hover:scale-110">lock</span>
+<span class="tracking-wide">Proceed to Checkout</span>
+</button>
+<div class="flex justify-center gap-6 mt-8 border-t border-white/5 pt-6">
+<span class="material-symbols-outlined text-white/20 text-3xl hover:text-white/40 transition-colors cursor-help" title="Visa">credit_card</span>
+<span class="material-symbols-outlined text-white/20 text-3xl hover:text-white/40 transition-colors cursor-help" title="Mastercard">payments</span>
+<span class="material-symbols-outlined text-white/20 text-3xl hover:text-white/40 transition-colors cursor-help" title="Paypal">account_balance_wallet</span>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-32 mb-12">
+<div class="flex items-center justify-between mb-10">
+<h2 class="text-3xl text-white font-light">Completing the Look</h2>
+<div class="hidden md:flex gap-2">
+<button class="size-10 rounded-full border border-white/10 flex items-center justify-center text-white/50 hover:bg-white hover:text-background-dark transition-all">
+<span class="material-symbols-outlined">arrow_back</span>
+</button>
+<button class="size-10 rounded-full border border-white/10 flex items-center justify-center text-white/50 hover:bg-white hover:text-background-dark transition-all">
+<span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+<div class="group cursor-pointer">
+<div class="aspect-square bg-accent-dark rounded-xl mb-5 overflow-hidden relative">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110" data-alt="Simple gold stud earrings" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCbTZROVpV7n0tMMgGDh9c3XLEPOnCrtJxXbtHBbrVuEkzbLuHZ89toXfN9QiObzQzmn9oquyk8PWupaGn1zsgs5Ja1AMxHQhsh-BSF1DZkqtV7n2XdDDstk1MIpsGVqVShuTSEYaS5ICqcgvbk5FnWihEnO1cVTrnVHp4oFmm1xh05S7RoQYhOkSh-9nMRZB2J9aJEtRlzB1BtLORqU_sifGCWUlVoCGG1HbMltWMRuUgJq0O9HBnxe1N3wgTo1JvMG4nKFw_z5LE");'></div>
+<div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300"></div>
+<button class="absolute bottom-4 right-4 bg-white/10 backdrop-blur-md hover:bg-primary text-white p-3 rounded-full transition-all duration-300 opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0">
+<span class="material-symbols-outlined text-xl">add_shopping_cart</span>
+</button>
+</div>
+<h3 class="text-white text-lg font-medium mb-1 group-hover:text-primary transition-colors">Solitaire Studs</h3>
+<p class="text-text-muted text-sm">$950</p>
+</div>
+<div class="group cursor-pointer">
+<div class="aspect-square bg-accent-dark rounded-xl mb-5 overflow-hidden relative">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110" data-alt="Thin gold chain bracelet" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBB1fCojOaFZhj_ANLZ0CPWVLqEMH3hMlHplsBsC1DXzLv_cGAIAc0ak7lEFLJOkwNwKTGlVb2ruSJzOzBlgnRlWlxumPhIErIV7vDgfeXV-okTsF--S_6apQGn_UpBLLt2XUDMzamd4-bk1_i10j1jkApZzkMuLLdi1Fyr_p2EjeAkbjGCDvzSITx2wqRWxCUDe4AcYgrH_QAg2SdeFTVvRYN9IlWn96eCNUfe-eVAiw4pB3k7RkTsoqNtfOLcawd5HCFBJKo0htA");'></div>
+<div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300"></div>
+<button class="absolute bottom-4 right-4 bg-white/10 backdrop-blur-md hover:bg-primary text-white p-3 rounded-full transition-all duration-300 opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0">
+<span class="material-symbols-outlined text-xl">add_shopping_cart</span>
+</button>
+</div>
+<h3 class="text-white text-lg font-medium mb-1 group-hover:text-primary transition-colors">Paperclip Chain</h3>
+<p class="text-text-muted text-sm">$1,200</p>
+</div>
+<div class="group cursor-pointer">
+<div class="aspect-square bg-accent-dark rounded-xl mb-5 overflow-hidden relative">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110" data-alt="Elegant jewelry cleaning kit box" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDWCTZXQ8hgeX_0WIwxsiZmNw8xZCjhPlPa0qSC-I4-VImZxR2wgzYUsMZ83czhqyewP-ffXXb-sAZg1V1wAPPiGWpZtj-qoMJPK3UIyeDaprLBpHtKIgVmuPDLIP6rWKPJ8ATvd3Jy0amz8Ifdhw41k3Z4u_ERvY796cShUupKjS_Ftn-Rmi6uyFZNC6cYBUGMVkAW0G7pwGnh00spPooj_s8O6WB20ek2IF7w-MUZsH747aEfbf7h5BAFFlZ5N1HqST2PKoh-_ck");'></div>
+<div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300"></div>
+<button class="absolute bottom-4 right-4 bg-white/10 backdrop-blur-md hover:bg-primary text-white p-3 rounded-full transition-all duration-300 opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0">
+<span class="material-symbols-outlined text-xl">add_shopping_cart</span>
+</button>
+</div>
+<h3 class="text-white text-lg font-medium mb-1 group-hover:text-primary transition-colors">Care Kit</h3>
+<p class="text-text-muted text-sm">$85</p>
+</div>
+<div class="group cursor-pointer">
+<div class="aspect-square bg-accent-dark rounded-xl mb-5 overflow-hidden relative">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110" data-alt="Luxurious velvet jewelry travel case" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAFU2ngpfzL40WO-HcOv7u3kuaspYKOgK5bGr7rq348UYXTrFQK8wtFGBoTrIChle96ysp1xtp3YiBqvGZ-OdRtDgFBI_1t-eJBHdB3RFsMpG3z4sElSVAG1bh6injDGGvJHRJEXNkLzHFtq4eXe5JoQU1TkC0ig52p1spaIL6SHR4OadDFPmyydU1qjKTepCLrQfOXxm57isJ3jfiM33pydClFczoZuNgcaGGgk_wwMs_AgZks0XaKn5DdyxN7JKaPNflTLdXOg_I");'></div>
+<div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300"></div>
+<button class="absolute bottom-4 right-4 bg-white/10 backdrop-blur-md hover:bg-primary text-white p-3 rounded-full transition-all duration-300 opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0">
+<span class="material-symbols-outlined text-xl">add_shopping_cart</span>
+</button>
+</div>
+<h3 class="text-white text-lg font-medium mb-1 group-hover:text-primary transition-colors">Velvet Travel Case</h3>
+<p class="text-text-muted text-sm">$250</p>
+</div>
+</div>
+</div>
+</main>
+
+</body></html>

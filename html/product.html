@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Luxe Jewelry - The Gold Collection</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&amp;family=Manrope:wght@200..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#d4af37", // Adjusted to a more classic gold
+              "primary-dark": "#b08d1a",
+              "background-light": "#fdfbf7",
+              "background-dark": "#12100e", // Richer black/brown
+              "surface-dark": "#1c1917",
+              "accent-brown": "#3d342b",
+              "text-gold": "#e5d5b7",
+              "text-muted": "#9ca3af",
+            },
+            fontFamily: {
+              "sans": ["Manrope", "sans-serif"],
+              "serif": ["Cormorant Garamond", "serif"],
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+            backgroundImage: {
+                'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        ::-webkit-scrollbar { width: 6px; height: 6px; }
+        ::-webkit-scrollbar-track { background: #12100e; }
+        ::-webkit-scrollbar-thumb { background: #3d342b; border-radius: 3px; }
+        ::-webkit-scrollbar-thumb:hover { background: #d4af37; }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-sans text-white overflow-x-hidden antialiased selection:bg-primary/30 selection:text-white">
+<header class="sticky top-0 z-50 w-full border-b border-white/5 bg-background-dark/80 backdrop-blur-xl supports-[backdrop-filter]:bg-background-dark/60">
+<div class="mx-auto flex h-24 max-w-[1600px] items-center justify-between px-6 lg:px-12">
+<button class="lg:hidden text-white hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-[28px]">menu</span>
+</button>
+<div class="flex items-center gap-1 absolute left-1/2 -translate-x-1/2 lg:static lg:translate-x-0">
+<span class="material-symbols-outlined text-[24px] text-primary fill-1">diamond</span>
+<h2 class="text-2xl font-serif font-semibold tracking-widest text-white uppercase ml-2">Luxe</h2>
+</div>
+<nav class="hidden lg:flex items-center gap-12">
+<a class="text-xs font-bold uppercase tracking-widest text-white hover:text-primary transition-colors" href="#">Shop</a>
+<a class="text-xs font-bold uppercase tracking-widest text-white hover:text-primary transition-colors" href="#">Collections</a>
+<a class="text-xs font-bold uppercase tracking-widest text-white hover:text-primary transition-colors" href="#">Heritage</a>
+<a class="text-xs font-bold uppercase tracking-widest text-white hover:text-primary transition-colors" href="#">Journal</a>
+</nav>
+<div class="flex items-center gap-6">
+<button class="text-white hover:text-primary transition-colors hidden sm:block">
+<span class="material-symbols-outlined text-[22px]">search</span>
+</button>
+<button class="text-white hover:text-primary transition-colors hidden sm:block">
+<span class="material-symbols-outlined text-[22px]">favorite</span>
+</button>
+<button class="relative text-white hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-[22px]">shopping_bag</span>
+<span class="absolute -right-2 -top-2 flex h-4 w-4 items-center justify-center rounded-full bg-primary text-[9px] font-bold text-black">2</span>
+</button>
+</div>
+</div>
+</header>
+<section class="relative w-full overflow-hidden h-[60vh] min-h-[500px]">
+<div class="absolute inset-0 bg-black/40 z-10"></div>
+<div class="h-full w-full bg-cover bg-center bg-fixed" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC2QVmxViLOCAMEAczUllpj-BaN3R58dNJQAZ499j2AMV8UVnUxAc9Xsqit7-c40bd3-awAuqYNuUgJK6-gPIRmHxErYiLEyRhfI8uymfJ2bikmy7Xkcz_H77c9yAx9sYajxnyB4fcRGEwdxDQSda8a12C9aVxvQkhxDgKZ3TapqZ-T5R7zh3WztYMrQHCJx04cvQxjzfRhpi8NjZGn_N-pN2nMRqNJbTq52zZgru_EXNdOVyRPuECPIRX2J2U_uXWtuqivjKvACLM');"></div>
+<div class="absolute inset-0 z-20 flex flex-col items-center justify-center px-4 text-center">
+<span class="mb-4 font-serif text-xl italic text-primary md:text-2xl">The Gold Standard</span>
+<h1 class="mb-6 font-serif text-5xl font-medium text-white sm:text-7xl md:text-8xl leading-none">
+            Timeless Aura
+        </h1>
+<p class="max-w-lg text-sm font-medium uppercase tracking-[0.2em] text-white/80">
+            Discover the new collection
+        </p>
+</div>
+</section>
+<div class="sticky top-24 z-40 w-full bg-background-dark/95 backdrop-blur-md border-b border-white/5 py-6 transition-all duration-300">
+<div class="mx-auto flex max-w-[1600px] flex-col md:flex-row items-center justify-between px-6 lg:px-12 gap-6">
+<div class="flex items-center gap-8 overflow-x-auto no-scrollbar w-full md:w-auto pb-2 md:pb-0 mask-image-linear-gradient-to-r">
+<button class="text-primary font-serif italic text-xl border-b border-primary pb-0.5">All Jewelry</button>
+<button class="text-white/60 hover:text-white font-serif text-xl transition-colors whitespace-nowrap">Necklaces</button>
+<button class="text-white/60 hover:text-white font-serif text-xl transition-colors whitespace-nowrap">Rings</button>
+<button class="text-white/60 hover:text-white font-serif text-xl transition-colors whitespace-nowrap">Earrings</button>
+<button class="text-white/60 hover:text-white font-serif text-xl transition-colors whitespace-nowrap">Bracelets</button>
+<button class="text-white/60 hover:text-white font-serif text-xl transition-colors whitespace-nowrap">Watches</button>
+</div>
+<div class="flex items-center gap-8 w-full md:w-auto justify-between md:justify-end border-t border-white/5 pt-4 md:border-t-0 md:pt-0">
+<button class="group flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-white hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-[18px] text-white/50 group-hover:text-primary transition-colors">tune</span>
+<span>Filters</span>
+</button>
+<button class="group flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-white hover:text-primary transition-colors">
+<span>Sort by</span>
+<span class="material-symbols-outlined text-[18px] text-white/50 group-hover:text-primary transition-colors">expand_more</span>
+</button>
+</div>
+</div>
+</div>
+<main class="mx-auto flex w-full max-w-[1600px] flex-col px-6 py-16 lg:px-12">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-16 lg:gap-y-24">
+<div class="group flex flex-col gap-6 cursor-pointer">
+<div class="relative aspect-[4/5] w-full overflow-hidden bg-surface-dark">
+<img alt="Close up of a luxury gold necklace with diamond pendant" class="h-full w-full object-cover transition-transform duration-[1.5s] ease-in-out group-hover:scale-110 opacity-90 group-hover:opacity-100" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB8U-QRd4LifKF6XHuAdsP0QpQRlSAs9lHy-KZZjL4Nu8BvOLoGrZ3h_afJRmZpoR1kt5kHg8cWWxUc7OJf2yieutp-gRMgOw4wv3E7MbK0GxRvgK6y24_0xoo4nRHDuDTRKT-ilVBd2t4Fb2MGHXOt23dwi6CSz9U38lnUHSzJTiq1q2xYDvwslTGvGj6Hs3bpJ4migyWBqFPDO7r6JgoRRTSLQ54BMWcLuJZSPkgzmvG-tOP-pmXyu6dU-gKBF8O4vDxc4_xya5U"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+<div class="absolute bottom-6 left-1/2 -translate-x-1/2 translate-y-4 opacity-0 transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100 w-[90%]">
+<button class="w-full bg-white/10 backdrop-blur-md border border-white/20 py-3 text-[10px] font-bold uppercase tracking-[0.2em] text-white hover:bg-white hover:text-black transition-all">Quick View</button>
+</div>
+</div>
+<div class="text-center">
+<h3 class="font-serif text-2xl text-white group-hover:text-primary transition-colors duration-300">Celestial Pendant</h3>
+<p class="mt-1 text-xs font-bold uppercase tracking-widest text-primary">$2,400</p>
+<p class="mt-2 text-sm text-white/40 font-serif italic">18k Gold &amp; Diamonds</p>
+</div>
+</div>
+<div class="group flex flex-col gap-6 cursor-pointer md:mt-12">
+<div class="relative aspect-[4/5] w-full overflow-hidden bg-surface-dark">
+<img alt="Elegant gold bracelet on dark background" class="h-full w-full object-cover transition-transform duration-[1.5s] ease-in-out group-hover:scale-110 opacity-90 group-hover:opacity-100" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBEVvepFADE_UumZT2VDVYmV41mRiRoC9tQx0xYyeQjWkkHG_XgmYXQThVfYLm9EZqtxrf4tz1inPsAw4WE4OmWI0IFQzucFU9yRpK31OoGoIPPy1gpD6WXlDefjCXXBlW4ETSIo09PTAr9OB5EFxenVkd3pliZZuxSYelnMipT0Lx6nI9JavkCnCJwUJ8z8-wV1_TnxzbkBx8vYredEWA2sDA23SLsVP5AWSl_7UHSusLwLNcI8hSVr__PztoklsWg30Zrmfq0wkk"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+<div class="absolute bottom-6 left-1/2 -translate-x-1/2 translate-y-4 opacity-0 transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100 w-[90%]">
+<button class="w-full bg-white/10 backdrop-blur-md border border-white/20 py-3 text-[10px] font-bold uppercase tracking-[0.2em] text-white hover:bg-white hover:text-black transition-all">Quick View</button>
+</div>
+</div>
+<div class="text-center">
+<h3 class="font-serif text-2xl text-white group-hover:text-primary transition-colors duration-300">Eternity Bangle</h3>
+<p class="mt-1 text-xs font-bold uppercase tracking-widest text-primary">$5,200</p>
+<p class="mt-2 text-sm text-white/40 font-serif italic">24k Solid Gold</p>
+</div>
+</div>
+<div class="relative flex flex-col justify-end overflow-hidden aspect-[4/5] md:aspect-auto lg:aspect-[4/5] bg-surface-dark group cursor-pointer lg:mt-0">
+<img alt="Abstract Luxury Texture" class="absolute inset-0 h-full w-full object-cover opacity-60 transition-transform duration-[2s] group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC2QVmxViLOCAMEAczUllpj-BaN3R58dNJQAZ499j2AMV8UVnUxAc9Xsqit7-c40bd3-awAuqYNuUgJK6-gPIRmHxErYiLEyRhfI8uymfJ2bikmy7Xkcz_H77c9yAx9sYajxnyB4fcRGEwdxDQSda8a12C9aVxvQkhxDgKZ3TapqZ-T5R7zh3WztYMrQHCJx04cvQxjzfRhpi8NjZGn_N-pN2nMRqNJbTq52zZgru_EXNdOVyRPuECPIRX2J2U_uXWtuqivjKvACLM"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black via-black/30 to-transparent"></div>
+<div class="relative z-10 p-10 text-center">
+<span class="mb-4 block text-[10px] font-bold uppercase tracking-[0.3em] text-primary">The Philosophy</span>
+<h3 class="mb-6 font-serif text-4xl italic text-white leading-tight">Golden<br/>Standards</h3>
+<span class="inline-flex items-center gap-2 border-b border-white/30 pb-1 text-[10px] font-bold uppercase tracking-widest text-white group-hover:border-primary group-hover:text-primary transition-colors">
+                    Read Journal
+                </span>
+</div>
+</div>
+<div class="group relative overflow-hidden bg-surface-dark md:col-span-2 lg:col-span-2 aspect-[16/9] md:aspect-auto lg:h-[600px] flex items-center">
+<div class="absolute inset-0">
+<img alt="A delicate gold necklace on a model" class="h-full w-full object-cover transition-transform duration-[2s] ease-out group-hover:scale-105 opacity-80" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB6BxJ2gcD1U_l6JmkKOFDt4dK32w0pq13eIz8YENvebODlT21KufgA4q6YtFGU3Zz-r6_CJ_7Mmzm1fsx6jTJ2q957aPgMwup8Pd5lgKjIXGxaDkKcjb-Ge1eWYnsopz8e_16a5Zh8XRH6Qynbfn0tQ1_dOXa9FDhPEQuvJaz63jBq0f0YJ9zkNfEtrY6j3k7MbomztnM2CEVXq8-N6JkD4a0if0sRnYPhLgLpgm_6LZmnaPm-RCQqI0uI0mhZAiTts9B98-B1MwY"/>
+<div class="absolute inset-0 bg-gradient-to-r from-black/80 via-black/20 to-transparent"></div>
+</div>
+<div class="relative z-10 p-8 md:p-16 max-w-lg">
+<div class="flex items-center gap-4 mb-6">
+<span class="h-[1px] w-12 bg-primary"></span>
+<span class="text-[10px] font-bold uppercase tracking-[0.3em] text-text-gold">Editor's Pick</span>
+</div>
+<h3 class="font-serif text-4xl md:text-5xl text-white mb-6 leading-tight">Serenity <br/><i class="text-primary font-light">Choker</i></h3>
+<p class="text-text-gold/80 mb-10 leading-relaxed font-light font-serif text-lg">
+                    Embrace delicate luxury with our signature 14k gold choker. Designed for the modern muse, perfectly balancing simplicity and statement.
+                </p>
+<div class="flex items-center gap-8">
+<button class="bg-white text-black px-8 py-4 text-[10px] font-bold uppercase tracking-[0.2em] hover:bg-primary hover:text-white transition-colors duration-300">
+                        Shop Now
+                    </button>
+<span class="font-serif text-2xl italic text-white">$950</span>
+</div>
+</div>
+</div>
+<div class="group flex flex-col gap-6 cursor-pointer lg:mt-24">
+<div class="relative aspect-[4/5] w-full overflow-hidden bg-surface-dark">
+<div class="absolute left-0 top-6 z-20">
+<span class="bg-primary px-4 py-1 text-[9px] font-bold uppercase tracking-widest text-black">New</span>
+</div>
+<img alt="Luxurious diamond ring shot on dark surface" class="h-full w-full object-cover transition-transform duration-[1.5s] ease-in-out group-hover:scale-110 opacity-90 group-hover:opacity-100" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCqJLaIEuPEFJixqYVqm2BIPrrQca-oKskPWBrzXoTA3x1elmQSgguNHCC2Bg2g6EV2Gn69BEghHfjqp-yr5YE0wgippByTcx213g4il3K2mWwE5i-_wl9w8794kvMONRhHqAFUqZyv-h9kDGlB4yOEZZee9YGko1ItavblnHwn9BWhpn-g9wk3AHaxz051XVMoXx4jRJLvZIWhxRHAATu6yDnTcPtFrQxrZU_MP6B3423u8CbotHeWVvcHrzzqHmuWPoPMh0gzFOI"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+<div class="absolute bottom-6 left-1/2 -translate-x-1/2 translate-y-4 opacity-0 transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100 w-[90%]">
+<button class="w-full bg-white/10 backdrop-blur-md border border-white/20 py-3 text-[10px] font-bold uppercase tracking-[0.2em] text-white hover:bg-white hover:text-black transition-all">Quick View</button>
+</div>
+</div>
+<div class="text-center">
+<h3 class="font-serif text-2xl text-white group-hover:text-primary transition-colors duration-300">Radiance Solitaire</h3>
+<p class="mt-1 text-xs font-bold uppercase tracking-widest text-primary">$8,900</p>
+<p class="mt-2 text-sm text-white/40 font-serif italic">Platinum &amp; Diamond</p>
+</div>
+</div>
+<div class="group flex flex-col gap-6 cursor-pointer">
+<div class="relative aspect-[4/5] w-full overflow-hidden bg-surface-dark">
+<img alt="Pair of minimalist gold earrings" class="h-full w-full object-cover transition-transform duration-[1.5s] ease-in-out group-hover:scale-110 opacity-90 group-hover:opacity-100" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCSSE_ewOI2HSQB04rsntQKaEMiiW61Uk_C-GlrRxRwhiIOoi5fOoK_s3VPCWtRJTbO0OPdmfgjTHHFEu-WiTPv4P5tW5mRNbIY7WEB8FlEb1kRnEgoK5FwhtU3ICDtVCw_W7xA2wCDbP_k_Cj4akj4Xtzoqu23zR9lczxcYlaNZegXTBsDMOTHbsIhrK8FGac3COmfzuFQMukv3rBbtG6iIl52nZPvHj9qwdc0FATsDHba4QUYwpchOgbb99DoICZnOGv8robuQcU"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+<div class="absolute bottom-6 left-1/2 -translate-x-1/2 translate-y-4 opacity-0 transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100 w-[90%]">
+<button class="w-full bg-white/10 backdrop-blur-md border border-white/20 py-3 text-[10px] font-bold uppercase tracking-[0.2em] text-white hover:bg-white hover:text-black transition-all">Quick View</button>
+</div>
+</div>
+<div class="text-center">
+<h3 class="font-serif text-2xl text-white group-hover:text-primary transition-colors duration-300">Aura Hoops</h3>
+<p class="mt-1 text-xs font-bold uppercase tracking-widest text-primary">$1,850</p>
+<p class="mt-2 text-sm text-white/40 font-serif italic">18k Rose Gold</p>
+</div>
+</div>
+<div class="group flex flex-col gap-6 cursor-pointer md:mt-12">
+<div class="relative aspect-[4/5] w-full overflow-hidden bg-surface-dark">
+<img alt="Close up of luxury watch with diamonds" class="h-full w-full object-cover transition-transform duration-[1.5s] ease-in-out group-hover:scale-110 opacity-90 group-hover:opacity-100" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDfURgwQCUs2JrISBCmfwL8U3uL-3TcjeH0Zhq_qcjcKzTD1VbPRlJ5-vdML0mK-TJNLdAkO6zHAjCzGp1pIT_HdyNn1n5EBOWSyrupkKPUvzPXKzqUbQK00CiVkHYWwe2lxUGE9Gska4pbOzfKBJvnJWqxw0P2gdYpvHaTeA09PK9eJLlqlKCosLIdgcb61xlpZb6UMxVMA2pFiPbxzTOAB7EkFRl8pKI3LaGriNdGWYBazqlYFDVEQfFsIEi_vF-JwpqigW2Jqdw"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+<div class="absolute bottom-6 left-1/2 -translate-x-1/2 translate-y-4 opacity-0 transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100 w-[90%]">
+<button class="w-full bg-white/10 backdrop-blur-md border border-white/20 py-3 text-[10px] font-bold uppercase tracking-[0.2em] text-white hover:bg-white hover:text-black transition-all">Quick View</button>
+</div>
+</div>
+<div class="text-center">
+<h3 class="font-serif text-2xl text-white group-hover:text-primary transition-colors duration-300">Heritage Timepiece</h3>
+<p class="mt-1 text-xs font-bold uppercase tracking-widest text-primary">$12,500</p>
+<p class="mt-2 text-sm text-white/40 font-serif italic">Gold &amp; Leather</p>
+</div>
+</div>
+<div class="flex flex-col items-center justify-center p-8 border border-white/5 bg-white/5 md:aspect-[4/5] lg:aspect-auto">
+<span class="material-symbols-outlined text-[48px] text-primary mb-6 animate-pulse font-light">diamond</span>
+<h3 class="font-serif text-3xl italic text-white text-center mb-4">Bespoke Design</h3>
+<p class="text-sm text-center text-white/60 mb-8 max-w-xs leading-relaxed">
+                 Create something as unique as your story. Our master jewelers are ready.
+             </p>
+<button class="text-[10px] font-bold uppercase tracking-[0.2em] text-white border-b border-white/30 pb-1 hover:text-primary hover:border-primary transition-colors">
+                 Start Consultation
+             </button>
+</div>
+</div>
+<div class="mt-24 flex flex-col items-center gap-4">
+<span class="text-xs font-serif italic text-white/50">Showing 6 of 48 masterpieces</span>
+<div class="h-[1px] w-24 bg-white/10"></div>
+<button class="group mt-4 flex items-center gap-3 bg-transparent px-10 py-4 text-[10px] font-bold uppercase tracking-[0.25em] text-white hover:text-primary transition-all">
+            Load More Collection
+            <span class="material-symbols-outlined text-[18px] group-hover:translate-y-1 transition-transform">expand_more</span>
+</button>
+</div>
+</main>
+<footer class="mt-12 border-t border-white/10 bg-[#0c0a08] py-20">
+<div class="mx-auto flex max-w-[1600px] flex-col gap-12 px-6 lg:flex-row lg:justify-between lg:px-12">
+<div class="flex max-w-md flex-col gap-8">
+<div class="flex items-center gap-2 text-white">
+<span class="material-symbols-outlined text-[24px] text-primary fill-1">diamond</span>
+<span class="text-xl font-serif font-bold tracking-widest uppercase">Luxe</span>
+</div>
+<p class="text-sm leading-7 text-white/60 font-light">
+                Crafting moments of brilliance since 1985. We source the finest materials to create jewelry that transcends time, embodying the perfect harmony of tradition and modern artistry.
+            </p>
+<div class="flex gap-6 text-white/40">
+<a class="hover:text-primary transition-colors" href="#"><i class="material-symbols-outlined">public</i></a>
+<a class="hover:text-primary transition-colors" href="#"><i class="material-symbols-outlined">mail</i></a>
+<a class="hover:text-primary transition-colors" href="#"><i class="material-symbols-outlined">call</i></a>
+</div>
+</div>
+<div class="flex flex-wrap gap-16 lg:gap-24">
+<div class="flex flex-col gap-6">
+<h4 class="text-xs font-bold uppercase tracking-widest text-primary">Boutique</h4>
+<a class="text-sm text-white/60 hover:text-white transition-colors" href="#">New Arrivals</a>
+<a class="text-sm text-white/60 hover:text-white transition-colors" href="#">Best Sellers</a>
+<a class="text-sm text-white/60 hover:text-white transition-colors" href="#">High Jewelry</a>
+<a class="text-sm text-white/60 hover:text-white transition-colors" href="#">Bridal</a>
+</div>
+<div class="flex flex-col gap-6">
+<h4 class="text-xs font-bold uppercase tracking-widest text-primary">Client Care</h4>
+<a class="text-sm text-white/60 hover:text-white transition-colors" href="#">Contact</a>
+<a class="text-sm text-white/60 hover:text-white transition-colors" href="#">Services</a>
+<a class="text-sm text-white/60 hover:text-white transition-colors" href="#">Appointments</a>
+<a class="text-sm text-white/60 hover:text-white transition-colors" href="#">Legal</a>
+</div>
+<div class="flex flex-col gap-6 max-w-xs">
+<h4 class="text-xs font-bold uppercase tracking-widest text-primary">The List</h4>
+<p class="text-sm text-white/60">First access to new collections and events.</p>
+<div class="flex border-b border-white/20 pb-2">
+<input class="w-full bg-transparent p-0 text-sm text-white focus:outline-none focus:ring-0 placeholder:text-white/30 border-none" placeholder="Email Address" type="email"/>
+<button class="text-xs font-bold uppercase text-primary hover:text-white transition-colors">Join</button>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-20 border-t border-white/5 pt-8 text-center text-[10px] uppercase tracking-widest text-white/30">
+        © 2024 Luxe Jewelry. All rights reserved.
+    </div>
+</footer>
+
+</body></html>

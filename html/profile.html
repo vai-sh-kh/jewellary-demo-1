@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Luxe Jewelry - My Profile</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&amp;family=Manrope:wght@200..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#d4af37", // Adjusted to a more classic gold
+              "primary-dark": "#b08d1a",
+              "background-light": "#fdfbf7",
+              "background-dark": "#12100e", // Richer black/brown
+              "surface-dark": "#1c1917",
+              "accent-brown": "#3d342b",
+              "text-gold": "#e5d5b7",
+              "text-muted": "#9ca3af",
+            },
+            fontFamily: {
+              "sans": ["Manrope", "sans-serif"],
+              "serif": ["Cormorant Garamond", "serif"],
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+            backgroundImage: {
+                'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        ::-webkit-scrollbar { width: 6px; height: 6px; }
+        ::-webkit-scrollbar-track { background: #12100e; }
+        ::-webkit-scrollbar-thumb { background: #3d342b; border-radius: 3px; }
+        ::-webkit-scrollbar-thumb:hover { background: #d4af37; }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-sans text-white overflow-x-hidden antialiased selection:bg-primary/30 selection:text-white flex flex-col min-h-screen">
+<header class="sticky top-0 z-50 w-full border-b border-white/5 bg-background-dark/80 backdrop-blur-xl supports-[backdrop-filter]:bg-background-dark/60">
+<div class="mx-auto flex h-24 max-w-[1600px] items-center justify-between px-6 lg:px-12">
+<button class="lg:hidden text-white hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-[28px]">menu</span>
+</button>
+<div class="flex items-center gap-1 absolute left-1/2 -translate-x-1/2 lg:static lg:translate-x-0">
+<span class="material-symbols-outlined text-[24px] text-primary fill-1">diamond</span>
+<h2 class="text-2xl font-serif font-semibold tracking-widest text-white uppercase ml-2">Luxe</h2>
+</div>
+<nav class="hidden lg:flex items-center gap-12">
+<a class="text-xs font-bold uppercase tracking-widest text-white hover:text-primary transition-colors" href="#">Shop</a>
+<a class="text-xs font-bold uppercase tracking-widest text-white hover:text-primary transition-colors" href="#">Collections</a>
+<a class="text-xs font-bold uppercase tracking-widest text-white hover:text-primary transition-colors" href="#">Heritage</a>
+<a class="text-xs font-bold uppercase tracking-widest text-white hover:text-primary transition-colors" href="#">Journal</a>
+</nav>
+<div class="flex items-center gap-6">
+<button class="text-white hover:text-primary transition-colors hidden sm:block">
+<span class="material-symbols-outlined text-[22px]">search</span>
+</button>
+<button class="text-white hover:text-primary transition-colors hidden sm:block">
+<span class="material-symbols-outlined text-[22px]">favorite</span>
+</button>
+<a class="relative text-white hover:text-primary transition-colors flex items-center gap-2 group" href="#">
+<div class="h-8 w-8 rounded-full bg-surface-dark border border-white/10 flex items-center justify-center overflow-hidden">
+<img alt="User Avatar" class="h-full w-full object-cover opacity-80" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCSSE_ewOI2HSQB04rsntQKaEMiiW61Uk_C-GlrRxRwhiIOoi5fOoK_s3VPCWtRJTbO0OPdmfgjTHHFEu-WiTPv4P5tW5mRNbIY7WEB8FlEb1kRnEgoK5FwhtU3ICDtVCw_W7xA2wCDbP_k_Cj4akj4Xtzoqu23zR9lczxcYlaNZegXTBsDMOTHbsIhrK8FGac3COmfzuFQMukv3rBbtG6iIl52nZPvHj9qwdc0FATsDHba4QUYwpchOgbb99DoICZnOGv8robuQcU"/>
+</div>
+<span class="text-xs font-bold uppercase tracking-wide hidden sm:block group-hover:text-primary">Eleanor</span>
+</a>
+<button class="relative text-white hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-[22px]">shopping_bag</span>
+<span class="absolute -right-2 -top-2 flex h-4 w-4 items-center justify-center rounded-full bg-primary text-[9px] font-bold text-black">2</span>
+</button>
+</div>
+</div>
+</header>
+<main class="mx-auto flex w-full max-w-[1600px] flex-col px-6 py-12 lg:px-12 flex-grow">
+<div class="mb-12">
+<h1 class="font-serif text-4xl font-medium text-white sm:text-5xl md:text-6xl mb-4">My Account</h1>
+<p class="text-white/60 font-light max-w-2xl">Welcome back, Eleanor. Manage your personal collection, orders, and account details.</p>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+<aside class="lg:col-span-3">
+<div class="sticky top-32 space-y-1">
+<a class="flex items-center justify-between w-full px-4 py-3 bg-surface-dark border-l-2 border-primary text-white" href="#">
+<span class="text-xs font-bold uppercase tracking-widest">Dashboard</span>
+<span class="material-symbols-outlined text-[18px]">dashboard</span>
+</a>
+<a class="flex items-center justify-between w-full px-4 py-3 text-white/60 hover:text-white hover:bg-surface-dark/50 transition-colors border-l-2 border-transparent hover:border-white/20" href="#">
+<span class="text-xs font-bold uppercase tracking-widest">Order History</span>
+<span class="material-symbols-outlined text-[18px]">receipt_long</span>
+</a>
+<a class="flex items-center justify-between w-full px-4 py-3 text-white/60 hover:text-white hover:bg-surface-dark/50 transition-colors border-l-2 border-transparent hover:border-white/20" href="#">
+<span class="text-xs font-bold uppercase tracking-widest">Wishlist</span>
+<span class="material-symbols-outlined text-[18px]">favorite</span>
+</a>
+<a class="flex items-center justify-between w-full px-4 py-3 text-white/60 hover:text-white hover:bg-surface-dark/50 transition-colors border-l-2 border-transparent hover:border-white/20" href="#">
+<span class="text-xs font-bold uppercase tracking-widest">Addresses</span>
+<span class="material-symbols-outlined text-[18px]">location_on</span>
+</a>
+<a class="flex items-center justify-between w-full px-4 py-3 text-white/60 hover:text-white hover:bg-surface-dark/50 transition-colors border-l-2 border-transparent hover:border-white/20" href="#">
+<span class="text-xs font-bold uppercase tracking-widest">Account Details</span>
+<span class="material-symbols-outlined text-[18px]">person</span>
+</a>
+<a class="flex items-center justify-between w-full px-4 py-3 text-white/60 hover:text-white hover:bg-surface-dark/50 transition-colors border-l-2 border-transparent hover:border-white/20 mt-8" href="#">
+<span class="text-xs font-bold uppercase tracking-widest">Log Out</span>
+<span class="material-symbols-outlined text-[18px]">logout</span>
+</a>
+</div>
+</aside>
+<div class="lg:col-span-9 space-y-12">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<div class="bg-surface-dark p-6 border border-white/5 relative overflow-hidden group">
+<div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
+<span class="material-symbols-outlined text-[64px] text-primary">shopping_bag</span>
+</div>
+<p class="text-xs font-bold uppercase tracking-widest text-white/60 mb-2">Total Orders</p>
+<p class="font-serif text-4xl text-white">12</p>
+<a class="inline-block mt-4 text-[10px] font-bold uppercase tracking-widest text-primary border-b border-primary/30 hover:border-primary pb-0.5 transition-colors" href="#">View History</a>
+</div>
+<div class="bg-surface-dark p-6 border border-white/5 relative overflow-hidden group">
+<div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
+<span class="material-symbols-outlined text-[64px] text-primary">favorite</span>
+</div>
+<p class="text-xs font-bold uppercase tracking-widest text-white/60 mb-2">Wishlist Items</p>
+<p class="font-serif text-4xl text-white">5</p>
+<a class="inline-block mt-4 text-[10px] font-bold uppercase tracking-widest text-primary border-b border-primary/30 hover:border-primary pb-0.5 transition-colors" href="#">View Saved</a>
+</div>
+<div class="bg-surface-dark p-6 border border-white/5 relative overflow-hidden group">
+<div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
+<span class="material-symbols-outlined text-[64px] text-primary">card_membership</span>
+</div>
+<p class="text-xs font-bold uppercase tracking-widest text-white/60 mb-2">Membership Tier</p>
+<p class="font-serif text-4xl text-text-gold">Gold Elite</p>
+<a class="inline-block mt-4 text-[10px] font-bold uppercase tracking-widest text-primary border-b border-primary/30 hover:border-primary pb-0.5 transition-colors" href="#">View Benefits</a>
+</div>
+</div>
+<section>
+<div class="flex items-end justify-between mb-6 border-b border-white/10 pb-4">
+<h2 class="font-serif text-2xl text-white">Recent Orders</h2>
+<a class="text-[10px] font-bold uppercase tracking-widest text-white/60 hover:text-white transition-colors" href="#">View All</a>
+</div>
+<div class="space-y-4">
+<div class="bg-surface-dark border border-white/5 p-6 flex flex-col md:flex-row gap-6 items-start md:items-center">
+<div class="h-24 w-24 flex-shrink-0 bg-background-dark overflow-hidden border border-white/10">
+<img alt="Order Item" class="h-full w-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB6BxJ2gcD1U_l6JmkKOFDt4dK32w0pq13eIz8YENvebODlT21KufgA4q6YtFGU3Zz-r6_CJ_7Mmzm1fsx6jTJ2q957aPgMwup8Pd5lgKjIXGxaDkKcjb-Ge1eWYnsopz8e_16a5Zh8XRH6Qynbfn0tQ1_dOXa9FDhPEQuvJaz63jBq0f0YJ9zkNfEtrY6j3k7MbomztnM2CEVXq8-N6JkD4a0if0sRnYPhLgLpgm_6LZmnaPm-RCQqI0uI0mhZAiTts9B98-B1MwY"/>
+</div>
+<div class="flex-grow">
+<div class="flex flex-col md:flex-row md:justify-between md:items-start mb-2">
+<div>
+<h3 class="font-serif text-xl text-white">Serenity Choker</h3>
+<p class="text-xs text-white/40 mt-1">Order #LX-88392 • Placed on Oct 12, 2023</p>
+</div>
+<div class="mt-2 md:mt-0 text-right">
+<span class="text-sm font-bold text-white">$950.00</span>
+</div>
+</div>
+<div class="flex flex-wrap gap-4 items-center mt-4">
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-green-900/20 text-green-400 text-[10px] font-bold uppercase tracking-widest border border-green-900/30">
+<span class="w-1.5 h-1.5 rounded-full bg-green-400"></span>
+                                    Delivered
+                                </span>
+<button class="text-[10px] font-bold uppercase tracking-widest text-white hover:text-primary transition-colors border-b border-transparent hover:border-primary">Track Shipment</button>
+<button class="text-[10px] font-bold uppercase tracking-widest text-white hover:text-primary transition-colors border-b border-transparent hover:border-primary">View Invoice</button>
+</div>
+</div>
+</div>
+<div class="bg-surface-dark border border-white/5 p-6 flex flex-col md:flex-row gap-6 items-start md:items-center opacity-80 hover:opacity-100 transition-opacity">
+<div class="h-24 w-24 flex-shrink-0 bg-background-dark overflow-hidden border border-white/10">
+<img alt="Order Item" class="h-full w-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCSSE_ewOI2HSQB04rsntQKaEMiiW61Uk_C-GlrRxRwhiIOoi5fOoK_s3VPCWtRJTbO0OPdmfgjTHHFEu-WiTPv4P5tW5mRNbIY7WEB8FlEb1kRnEgoK5FwhtU3ICDtVCw_W7xA2wCDbP_k_Cj4akj4Xtzoqu23zR9lczxcYlaNZegXTBsDMOTHbsIhrK8FGac3COmfzuFQMukv3rBbtG6iIl52nZPvHj9qwdc0FATsDHba4QUYwpchOgbb99DoICZnOGv8robuQcU"/>
+</div>
+<div class="flex-grow">
+<div class="flex flex-col md:flex-row md:justify-between md:items-start mb-2">
+<div>
+<h3 class="font-serif text-xl text-white">Aura Hoops</h3>
+<p class="text-xs text-white/40 mt-1">Order #LX-88104 • Placed on Sep 28, 2023</p>
+</div>
+<div class="mt-2 md:mt-0 text-right">
+<span class="text-sm font-bold text-white">$1,850.00</span>
+</div>
+</div>
+<div class="flex flex-wrap gap-4 items-center mt-4">
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/5 text-white/60 text-[10px] font-bold uppercase tracking-widest border border-white/10">
+                                    Delivered
+                                </span>
+<button class="text-[10px] font-bold uppercase tracking-widest text-white hover:text-primary transition-colors border-b border-transparent hover:border-primary">Buy Again</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section>
+<div class="flex items-end justify-between mb-6 border-b border-white/10 pb-4">
+<h2 class="font-serif text-2xl text-white">Saved Collection</h2>
+<a class="text-[10px] font-bold uppercase tracking-widest text-white/60 hover:text-white transition-colors" href="#">View All Wishlist</a>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
+<div class="group relative">
+<div class="aspect-[4/5] bg-surface-dark overflow-hidden mb-3 relative">
+<button class="absolute top-2 right-2 z-10 text-white/50 hover:text-red-500 transition-colors bg-black/20 backdrop-blur-sm p-1.5 rounded-full">
+<span class="material-symbols-outlined text-[16px] fill-1">close</span>
+</button>
+<img alt="Wishlist Item" class="h-full w-full object-cover group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB8U-QRd4LifKF6XHuAdsP0QpQRlSAs9lHy-KZZjL4Nu8BvOLoGrZ3h_afJRmZpoR1kt5kHg8cWWxUc7OJf2yieutp-gRMgOw4wv3E7MbK0GxRvgK6y24_0xoo4nRHDuDTRKT-ilVBd2t4Fb2MGHXOt23dwi6CSz9U38lnUHSzJTiq1q2xYDvwslTGvGj6Hs3bpJ4migyWBqFPDO7r6JgoRRTSLQ54BMWcLuJZSPkgzmvG-tOP-pmXyu6dU-gKBF8O4vDxc4_xya5U"/>
+<div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+<button class="bg-white text-black px-4 py-2 text-[9px] font-bold uppercase tracking-[0.2em] hover:bg-primary hover:text-white transition-colors">Add to Bag</button>
+</div>
+</div>
+<h4 class="font-serif text-lg text-white">Celestial Pendant</h4>
+<p class="text-xs font-bold text-primary mt-1">$2,400</p>
+</div>
+<div class="group relative">
+<div class="aspect-[4/5] bg-surface-dark overflow-hidden mb-3 relative">
+<button class="absolute top-2 right-2 z-10 text-white/50 hover:text-red-500 transition-colors bg-black/20 backdrop-blur-sm p-1.5 rounded-full">
+<span class="material-symbols-outlined text-[16px] fill-1">close</span>
+</button>
+<img alt="Wishlist Item" class="h-full w-full object-cover group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCqJLaIEuPEFJixqYVqm2BIPrrQca-oKskPWBrzXoTA3x1elmQSgguNHCC2Bg2g6EV2Gn69BEghHfjqp-yr5YE0wgippByTcx213g4il3K2mWwE5i-_wl9w8794kvMONRhHqAFUqZyv-h9kDGlB4yOEZZee9YGko1ItavblnHwn9BWhpn-g9wk3AHaxz051XVMoXx4jRJLvZIWhxRHAATu6yDnTcPtFrQxrZU_MP6B3423u8CbotHeWVvcHrzzqHmuWPoPMh0gzFOI"/>
+<div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+<button class="bg-white text-black px-4 py-2 text-[9px] font-bold uppercase tracking-[0.2em] hover:bg-primary hover:text-white transition-colors">Add to Bag</button>
+</div>
+</div>
+<h4 class="font-serif text-lg text-white">Radiance Solitaire</h4>
+<p class="text-xs font-bold text-primary mt-1">$8,900</p>
+</div>
+<div class="group relative">
+<div class="aspect-[4/5] bg-surface-dark overflow-hidden mb-3 relative">
+<button class="absolute top-2 right-2 z-10 text-white/50 hover:text-red-500 transition-colors bg-black/20 backdrop-blur-sm p-1.5 rounded-full">
+<span class="material-symbols-outlined text-[16px] fill-1">close</span>
+</button>
+<img alt="Wishlist Item" class="h-full w-full object-cover group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDfURgwQCUs2JrISBCmfwL8U3uL-3TcjeH0Zhq_qcjcKzTD1VbPRlJ5-vdML0mK-TJNLdAkO6zHAjCzGp1pIT_HdyNn1n5EBOWSyrupkKPUvzPXKzqUbQK00CiVkHYWwe2lxUGE9Gska4pbOzfKBJvnJWqxw0P2gdYpvHaTeA09PK9eJLlqlKCosLIdgcb61xlpZb6UMxVMA2pFiPbxzTOAB7EkFRl8pKI3LaGriNdGWYBazqlYFDVEQfFsIEi_vF-JwpqigW2Jqdw"/>
+<div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+<button class="bg-white text-black px-4 py-2 text-[9px] font-bold uppercase tracking-[0.2em] hover:bg-primary hover:text-white transition-colors">Add to Bag</button>
+</div>
+</div>
+<h4 class="font-serif text-lg text-white">Heritage Timepiece</h4>
+<p class="text-xs font-bold text-primary mt-1">$12,500</p>
+</div>
+<a class="group relative flex flex-col h-full border border-dashed border-white/20 hover:border-primary/50 transition-colors bg-surface-dark/30 hover:bg-surface-dark p-4 items-center justify-center text-center aspect-[4/5] md:aspect-auto" href="#">
+<span class="material-symbols-outlined text-4xl text-white/20 group-hover:text-primary/80 transition-colors mb-2">add</span>
+<span class="text-xs font-bold uppercase tracking-widest text-white/40 group-hover:text-white transition-colors">Discover More</span>
+</a>
+</div>
+</section>
+<section class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div>
+<div class="flex items-center justify-between mb-6 border-b border-white/10 pb-4">
+<h2 class="font-serif text-2xl text-white">Personal Info</h2>
+<button class="text-white/40 hover:text-primary transition-colors"><span class="material-symbols-outlined text-[18px]">edit</span></button>
+</div>
+<div class="bg-surface-dark border border-white/5 p-6 space-y-4">
+<div class="grid grid-cols-3 gap-4">
+<span class="text-xs font-bold uppercase tracking-widest text-white/40">Name</span>
+<span class="col-span-2 text-sm text-white">Eleanor Rigby</span>
+</div>
+<div class="grid grid-cols-3 gap-4">
+<span class="text-xs font-bold uppercase tracking-widest text-white/40">Email</span>
+<span class="col-span-2 text-sm text-white">eleanor.r@example.com</span>
+</div>
+<div class="grid grid-cols-3 gap-4">
+<span class="text-xs font-bold uppercase tracking-widest text-white/40">Phone</span>
+<span class="col-span-2 text-sm text-white">+1 (555) 123-4567</span>
+</div>
+<div class="grid grid-cols-3 gap-4">
+<span class="text-xs font-bold uppercase tracking-widest text-white/40">Birthday</span>
+<span class="col-span-2 text-sm text-white">November 12</span>
+</div>
+<div class="mt-4 pt-4 border-t border-white/10">
+<span class="text-xs font-bold uppercase tracking-widest text-primary block mb-2">Primary Address</span>
+<p class="text-sm text-white/80 leading-relaxed">
+                                482 Madison Avenue<br/>
+                                Penthouse Suite 4B<br/>
+                                New York, NY 10022<br/>
+                                United States
+                            </p>
+</div>
+</div>
+</div>
+<div>
+<div class="flex items-center justify-between mb-6 border-b border-white/10 pb-4">
+<h2 class="font-serif text-2xl text-white">Preferences</h2>
+</div>
+<div class="bg-surface-dark border border-white/5 p-6 h-full flex flex-col justify-between">
+<div class="space-y-6">
+<div class="flex items-start justify-between">
+<div>
+<h4 class="text-sm font-bold text-white mb-1">Email Newsletter</h4>
+<p class="text-xs text-white/40">Receive updates on new collections and exclusive events.</p>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox" value=""/>
+<div class="w-9 h-5 bg-white/10 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+<div class="flex items-start justify-between">
+<div>
+<h4 class="text-sm font-bold text-white mb-1">SMS Notifications</h4>
+<p class="text-xs text-white/40">Get shipping updates directly to your phone.</p>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input class="sr-only peer" type="checkbox" value=""/>
+<div class="w-9 h-5 bg-white/10 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+<div class="pt-4 border-t border-white/10">
+<h4 class="text-sm font-bold text-white mb-3">Interests</h4>
+<div class="flex flex-wrap gap-2">
+<span class="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-[10px] uppercase tracking-wider text-primary">Gold</span>
+<span class="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-[10px] uppercase tracking-wider text-white hover:text-primary cursor-pointer transition-colors">Platinum</span>
+<span class="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-[10px] uppercase tracking-wider text-white hover:text-primary cursor-pointer transition-colors">Watches</span>
+<span class="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-[10px] uppercase tracking-wider text-primary">Diamonds</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="mt-8 bg-surface-dark/50 border border-white/5 p-6 rounded-sm flex flex-col md:flex-row items-center justify-between gap-6">
+<div class="flex items-center gap-4">
+<div class="p-3 bg-white/5 rounded-full">
+<span class="material-symbols-outlined text-white/60">lock</span>
+</div>
+<div>
+<h4 class="text-sm font-bold text-white uppercase tracking-wider">Account Security</h4>
+<p class="text-xs text-white/40 mt-1">Last password change: 3 months ago</p>
+</div>
+</div>
+<div class="flex gap-4">
+<button class="text-[10px] font-bold uppercase tracking-widest text-white border border-white/20 px-6 py-3 hover:bg-white hover:text-black transition-colors">Change Password</button>
+<button class="text-[10px] font-bold uppercase tracking-widest text-red-400 border border-red-900/30 px-6 py-3 hover:bg-red-900/20 transition-colors">Deactivate</button>
+</div>
+</section>
+</div>
+</div>
+</main>
+<footer class="mt-12 border-t border-white/10 bg-[#0c0a08] py-20">
+<div class="mx-auto flex max-w-[1600px] flex-col gap-12 px-6 lg:flex-row lg:justify-between lg:px-12">
+<div class="flex max-w-md flex-col gap-8">
+<div class="flex items-center gap-2 text-white">
+<span class="material-symbols-outlined text-[24px] text-primary fill-1">diamond</span>
+<span class="text-xl font-serif font-bold tracking-widest uppercase">Luxe</span>
+</div>
+<p class="text-sm leading-7 text-white/60 font-light">
+                Crafting moments of brilliance since 1985. We source the finest materials to create jewelry that transcends time, embodying the perfect harmony of tradition and modern artistry.
+            </p>
+<div class="flex gap-6 text-white/40">
+<a class="hover:text-primary transition-colors" href="#"><i class="material-symbols-outlined">public</i></a>
+<a class="hover:text-primary transition-colors" href="#"><i class="material-symbols-outlined">mail</i></a>
+<a class="hover:text-primary transition-colors" href="#"><i class="material-symbols-outlined">call</i></a>
+</div>
+</div>
+<div class="flex flex-wrap gap-16 lg:gap-24">
+<div class="flex flex-col gap-6">
+<h4 class="text-xs font-bold uppercase tracking-widest text-primary">Boutique</h4>
+<a class="text-sm text-white/60 hover:text-white transition-colors" href="#">New Arrivals</a>
+<a class="text-sm text-white/60 hover:text-white transition-colors" href="#">Best Sellers</a>
+<a class="text-sm text-white/60 hover:text-white transition-colors" href="#">High Jewelry</a>
+<a class="text-sm text-white/60 hover:text-white transition-colors" href="#">Bridal</a>
+</div>
+<div class="flex flex-col gap-6">
+<h4 class="text-xs font-bold uppercase tracking-widest text-primary">Client Care</h4>
+<a class="text-sm text-white/60 hover:text-white transition-colors" href="#">Contact</a>
+<a class="text-sm text-white/60 hover:text-white transition-colors" href="#">Services</a>
+<a class="text-sm text-white/60 hover:text-white transition-colors" href="#">Appointments</a>
+<a class="text-sm text-white/60 hover:text-white transition-colors" href="#">Legal</a>
+</div>
+<div class="flex flex-col gap-6 max-w-xs">
+<h4 class="text-xs font-bold uppercase tracking-widest text-primary">The List</h4>
+<p class="text-sm text-white/60">First access to new collections and events.</p>
+<div class="flex border-b border-white/20 pb-2">
+<input class="w-full bg-transparent p-0 text-sm text-white focus:outline-none focus:ring-0 placeholder:text-white/30 border-none" placeholder="Email Address" type="email"/>
+<button class="text-xs font-bold uppercase text-primary hover:text-white transition-colors">Join</button>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-20 border-t border-white/5 pt-8 text-center text-[10px] uppercase tracking-widest text-white/30">
+        © 2024 Luxe Jewelry. All rights reserved.
+    </div>
+</footer>
+</body></html>

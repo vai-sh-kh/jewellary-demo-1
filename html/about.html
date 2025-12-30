@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>LUMIÈRE - The Art of Adornment</title>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ec9c13",
+                        "background-light": "#f8f7f6",
+                        "background-dark": "#1a1612","surface-dark": "#26201a",
+                        "text-secondary": "#d4c5a9",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"],
+                        "serif": ["Playfair Display", "serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "2xl": "1rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style type="text/tailwindcss">
+        @layer utilities {
+            .text-balance {
+                text-wrap: balance;
+            }
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-white font-display antialiased overflow-x-hidden selection:bg-primary selection:text-white">
+<header class="sticky top-0 z-50 w-full border-b border-solid border-[#483a23] bg-[#1a1612]/95 backdrop-blur-md px-4 md:px-10 py-4 transition-all duration-300">
+<div class="flex items-center justify-between whitespace-nowrap">
+<div class="flex items-center gap-4 lg:gap-12">
+<div class="flex items-center gap-3 text-white">
+<div class="size-7 text-primary">
+<svg class="w-full h-full drop-shadow-lg" fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M24 4L29 19L44 24L29 29L24 44L19 29L4 24L19 19L24 4Z" fill="currentColor"></path>
+</svg>
+</div>
+<h2 class="text-white text-2xl font-bold tracking-[0.1em] font-display">LUMIÈRE</h2>
+</div>
+<nav class="hidden md:flex items-center gap-8 ml-4">
+<a class="text-white/70 hover:text-primary transition-colors text-xs uppercase tracking-widest font-semibold" href="#">Collections</a>
+<a class="text-white/70 hover:text-primary transition-colors text-xs uppercase tracking-widest font-semibold" href="#">Bespoke</a>
+<a class="text-white/70 hover:text-primary transition-colors text-xs uppercase tracking-widest font-semibold" href="#">Atelier</a>
+<a class="text-white text-xs uppercase tracking-widest font-semibold border-b border-primary pb-0.5" href="#">About</a>
+<a class="text-white/70 hover:text-primary transition-colors text-xs uppercase tracking-widest font-semibold" href="#">Journal</a>
+</nav>
+</div>
+<div class="flex flex-1 justify-end gap-4 lg:gap-8">
+<div class="flex gap-4">
+<button class="flex items-center justify-center rounded-full size-10 text-white/80 hover:text-primary transition-colors">
+<span class="material-symbols-outlined font-light">search</span>
+</button>
+<button class="flex items-center justify-center rounded-full size-10 text-white/80 hover:text-primary transition-colors relative">
+<span class="material-symbols-outlined font-light">shopping_bag</span>
+<span class="absolute top-2 right-1 size-2 bg-primary rounded-full"></span>
+</button>
+<button class="md:hidden flex items-center justify-center rounded-full size-10 text-white">
+<span class="material-symbols-outlined font-light">menu</span>
+</button>
+</div>
+</div>
+</div>
+</header>
+<main class="flex flex-col w-full">
+<section class="relative h-[90vh] flex items-center justify-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img alt="Luxury jewelry macro shot" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCpqBwPaiX2RcpfgMfRo04uXHXcgX6U7-1xpA4r0HOEc04sxzLPGsskBI_OAcq5uKEeJ-F-_eEoXEOuvyzvONXcE6xFHKHG5drnzDgpkn7FVn9X0TNxKxrJ5vFLgzXUeOz_p1VKcswhBfD0wPAKiCm2UvrT7rMMimGbUeCPEX7Zs1FzPMa83BM6jM5r05n8tEIouAFvXTw5Ruwf3zo6aDdyI9OrGtYwPhYkP5FCSxcHIB2vn4Ad6KdD1vJLJsviLJ6vgQ-CIYnir2c"/>
+<div class="absolute inset-0 bg-black/40 mix-blend-multiply"></div>
+<div class="absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-background-dark"></div>
+</div>
+<div class="relative z-10 container mx-auto px-4 flex flex-col items-center text-center max-w-5xl pt-20">
+<div class="flex items-center gap-4 mb-8 opacity-0 animate-[fadeIn_1s_ease-out_forwards]">
+<div class="h-[1px] w-12 bg-primary/60"></div>
+<span class="text-primary tracking-[0.3em] text-xs font-bold uppercase">Maison Fondée 1985</span>
+<div class="h-[1px] w-12 bg-primary/60"></div>
+</div>
+<h1 class="text-white text-6xl md:text-8xl lg:text-9xl font-serif font-medium leading-none tracking-tight mb-8 drop-shadow-2xl opacity-0 animate-[fadeIn_1s_ease-out_0.3s_forwards]">
+                The Art of <br/>
+<span class="italic text-primary/90">Adornment</span>
+</h1>
+<p class="text-gray-200 text-lg md:text-xl font-light leading-relaxed max-w-2xl mx-auto mb-12 text-balance opacity-0 animate-[fadeIn_1s_ease-out_0.6s_forwards]">
+                We capture light, wrap it in gold, and craft legacies. <br class="hidden md:block"/>Jewelry is not just an accessory, but a profound expression of the soul.
+            </p>
+<div class="flex flex-col sm:flex-row gap-6 opacity-0 animate-[fadeIn_1s_ease-out_0.9s_forwards]">
+<button class="px-10 py-4 bg-primary text-background-dark font-bold text-sm uppercase tracking-widest hover:bg-[#ffb42e] transition-all duration-300 rounded-sm">
+                    Explore Our Heritage
+                </button>
+</div>
+</div>
+</section>
+<section class="py-32 px-4 md:px-10 bg-background-dark relative overflow-hidden">
+<div class="absolute top-0 right-0 w-1/3 h-full bg-surface-dark/30 skew-x-12 transform translate-x-20"></div>
+<div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-16 items-center relative z-10">
+<div class="lg:col-span-5 space-y-10">
+<div class="space-y-4">
+<span class="text-primary text-xs font-bold tracking-[0.2em] uppercase">Our Philosophy</span>
+<h2 class="text-4xl md:text-5xl font-serif text-white leading-[1.15]">
+                        Beauty lies in the details often <span class="italic text-primary">unseen</span>.
+                    </h2>
+</div>
+<div class="space-y-6 text-text-secondary font-light text-lg leading-relaxed">
+<p>
+                        At Lumière, we pursue perfection not because it is expected, but because it is the only way we know how to exist. Every curve, every setting, and every facet is deliberated upon with the patience of an artist and the precision of an engineer.
+                    </p>
+<p>
+                        In a world of mass production, we remain steadfast in our commitment to the slow, deliberate art of hand-fabrication. Each piece is a dialogue between the master craftsman and the raw material.
+                    </p>
+</div>
+<div class="pt-4">
+<img alt="Signature" class="h-16 opacity-80 invert" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCYADi-uRzRQsDXDpanFO1SqmcUC4yScAcZNmfo4BHs9wu-lq0fkdBu6gghyyr5Q_BliH_ppEeh8ot0X3jFSjkJjqH9465gMrLUTm2cWS0kW33h-8amVwn0M-3NMn7WBbl5gq-46vSYZz-HOJR7_u4ief6K04Mkt-sE1iSOvjx_S3fTXNuCDxXgYvDx02eTjJplSAkL_6440j3WgKEo45ZIQdOVaSldyyHEWupyR0NKK3g1i-OxEZY-wsU4riDHsPy9woCB9KBQJhQ"/>
+<p class="text-sm text-text-secondary mt-2">Elena Vosque, Founder</p>
+</div>
+</div>
+<div class="lg:col-span-7 relative h-[600px] lg:h-[700px]">
+<div class="absolute right-0 top-0 w-5/6 h-5/6 rounded-sm overflow-hidden shadow-2xl">
+<img alt="Artisan jeweler working" class="w-full h-full object-cover hover:scale-105 transition-transform duration-1000" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBH434ZxOLyxJYrK3ToAhKEJ0uac1OgrDLiRGYkFRzPKQCFs332gtax6ekpOx6bRFNnk7CqOCu3fBFKUmMvklVSGV0Mof0otBI8WK1KPW1MEHHiJPnD_3cwd7XTSgv3OzK5V91luo3ZJFGBLKiS490DOBFNlIcJReXKlpdCDCNM-RkGAm4VHa0yrA6T9XUNtYnfPkTa-qp6LqNzZo1PFA38TLtsDgGxCfgbi4_9YC5tvuupFex1kXQk37_S6waDNDmaeGRh87ZIpwc"/>
+</div>
+<div class="absolute left-0 bottom-0 w-1/2 h-1/2 rounded-sm overflow-hidden shadow-2xl border-4 border-background-dark z-20">
+<img alt="Close up of diamonds" class="w-full h-full object-cover hover:scale-105 transition-transform duration-1000" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAxggxhfztzh4opyBTcMwW1Rlbb2Rw4lzJkUu_fbf2PHJX3MJ111mCB7rS57n5Eef9wKXGrSMEmdXBnu0BxWrR7LJBmXGaks2zF3SWESP09bqZlvVfEOvlOUM_5l4pouwJ81dEFdaLQoONX3xZA17n5Wc6NvWOlIHEbaIgRpicRNOQdy8p4J7zd-uCYz3dlLIe5pAwK22cq-KoPLSVURpnFP1BDu8P__3-t9cjmBjdbLLNdfpWxlQDcY3WyNH2EG3hjJ2yTHagoYu4"/>
+</div>
+<div class="absolute left-1/4 top-1/2 transform -translate-y-1/2 -translate-x-1/2 w-40 h-40 border border-primary/20 rounded-full z-0"></div>
+</div>
+</div>
+</section>
+<section class="py-32 bg-[#14100c] border-y border-white/5">
+<div class="container mx-auto px-4 md:px-10 max-w-7xl">
+<div class="text-center mb-24">
+<span class="text-primary text-xs font-bold tracking-[0.2em] uppercase mb-4 block">The Journey</span>
+<h2 class="text-white text-4xl md:text-6xl font-serif italic">A Legacy in Gold</h2>
+</div>
+<div class="relative space-y-32">
+<div class="absolute left-4 md:left-1/2 top-0 bottom-0 w-[1px] bg-gradient-to-b from-transparent via-primary/30 to-transparent z-0"></div>
+<div class="relative grid grid-cols-1 md:grid-cols-2 gap-12 items-center group">
+<div class="md:text-right md:pr-16 order-2 md:order-1 pl-12 md:pl-0">
+<div class="inline-block mb-4">
+<span class="text-6xl text-white/10 font-serif font-bold group-hover:text-primary/20 transition-colors duration-500">1985</span>
+</div>
+<h3 class="text-2xl text-white font-serif mb-4">The First Sketch</h3>
+<p class="text-text-secondary leading-relaxed">
+                            Founded in a small Parisian attic by Elena Vosque. Armed with nothing but a sketchbook and a vision, Lumière began as a bespoke service for a select circle who valued discretion and unparalleled artistry.
+                        </p>
+</div>
+<div class="absolute left-4 md:left-1/2 -ml-[5px] w-[11px] h-[11px] rounded-full bg-primary border-4 border-[#14100c] z-10 top-0 md:top-1/2 md:-mt-[5px]"></div>
+<div class="order-1 md:order-2 pl-12 md:pl-16">
+<div class="relative h-[300px] md:h-[400px] w-full overflow-hidden rounded-sm bg-surface-dark">
+<img alt="Original design sketch" class="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBeXxhCXOBYhB0mU6aohvRwAlzA1vf3AqUkGEoSBLGJ9GLSOOj8HNj4azOf5B6JpQ9ehCZ77C_ULHyEjnj_HJsfw_TrfLKJyPrZgLgUGrplvhAhqTBG535kgbqEwd3WfIdduOZPskTHL0J-SIPWRZKsjAwgouX1C45litiH4uEuKoCwk7mLnIoYlrPKs7et6lCfBv0jth-oa4rA_sPPNcIrNqvFpb98c1gJqx2s4nE2HQ_iiwwv4gUlMk9De6YThjFXUWU-Tubef70"/>
+<div class="absolute inset-0 border border-white/10"></div>
+</div>
+</div>
+</div>
+<div class="relative grid grid-cols-1 md:grid-cols-2 gap-12 items-center group">
+<div class="order-1 pl-12 md:pl-0 md:pr-16">
+<div class="relative h-[300px] md:h-[400px] w-full overflow-hidden rounded-sm bg-surface-dark">
+<img alt="Jeweler workbench" class="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuByxlvjk3OQ7sEkb9PHzzUY4kQqguSeEyzSZDYR2CSMtc2LUUHw4PlI8xhNwjHuK0QiJTnDL7SBPZ2StvVXmFT8xz8XH5sPA0fFORtvMZDHN2pf7jIvUfEh-oGx-VjVXK_VMF1h8dCa8eKMa9BjzFm_H9P3EL-UcEFEO-4Oq0nE_7FPVdvVhK5QYHg8r9OFof4V2fJsi__dtz7ZidQExVxCIpLitVjAFM18CHfUr2g386GQlOWUBHNdWE9yYg0_HVb6_OimmFmi1jQ"/>
+<div class="absolute bottom-4 left-4 bg-black/60 px-4 py-2 text-white text-xs uppercase tracking-widest backdrop-blur-sm">Mayfair, London</div>
+</div>
+</div>
+<div class="absolute left-4 md:left-1/2 -ml-[5px] w-[11px] h-[11px] rounded-full bg-primary border-4 border-[#14100c] z-10 top-0 md:top-1/2 md:-mt-[5px]"></div>
+<div class="order-2 pl-12 md:pl-16">
+<div class="inline-block mb-4">
+<span class="text-6xl text-white/10 font-serif font-bold group-hover:text-primary/20 transition-colors duration-500">1998</span>
+</div>
+<h3 class="text-2xl text-white font-serif mb-4">Crossing Borders</h3>
+<p class="text-text-secondary leading-relaxed">
+                            Expanding beyond private commissions, our first flagship boutique opened in London's Mayfair district. It was here that we established our own dedicated atelier, bringing all craftsmanship in-house.
+                        </p>
+</div>
+</div>
+<div class="relative grid grid-cols-1 md:grid-cols-2 gap-12 items-center group">
+<div class="md:text-right md:pr-16 order-2 md:order-1 pl-12 md:pl-0">
+<div class="inline-block mb-4">
+<span class="text-6xl text-white/10 font-serif font-bold group-hover:text-primary/20 transition-colors duration-500">2023</span>
+</div>
+<h3 class="text-2xl text-white font-serif mb-4">A New Era</h3>
+<p class="text-text-secondary leading-relaxed">
+                            With new ateliers in New York and Tokyo, we continue to blend traditional French savoir-faire with modern, global inspiration. Our commitment to ethical sourcing now sets the industry standard.
+                        </p>
+</div>
+<div class="absolute left-4 md:left-1/2 -ml-[5px] w-[11px] h-[11px] rounded-full bg-primary border-4 border-[#14100c] z-10 top-0 md:top-1/2 md:-mt-[5px]"></div>
+<div class="order-1 md:order-2 pl-12 md:pl-16">
+<div class="relative h-[300px] md:h-[400px] w-full overflow-hidden rounded-sm bg-surface-dark">
+<img alt="Modern collection" class="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCpqBwPaiX2RcpfgMfRo04uXHXcgX6U7-1xpA4r0HOEc04sxzLPGsskBI_OAcq5uKEeJ-F-_eEoXEOuvyzvONXcE6xFHKHG5drnzDgpkn7FVn9X0TNxKxrJ5vFLgzXUeOz_p1VKcswhBfD0wPAKiCm2UvrT7rMMimGbUeCPEX7Zs1FzPMa83BM6jM5r05n8tEIouAFvXTw5Ruwf3zo6aDdyI9OrGtYwPhYkP5FCSxcHIB2vn4Ad6KdD1vJLJsviLJ6vgQ-CIYnir2c"/>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-32 px-4 md:px-10 bg-surface-dark relative">
+<div class="max-w-6xl mx-auto">
+<div class="flex flex-col md:flex-row gap-16 items-center">
+<div class="w-full md:w-5/12 relative">
+<div class="relative aspect-[3/4] overflow-hidden rounded-sm">
+<img alt="Elena Vosque Portrait" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA_qelcwdBMneKYs6IAsXpZPgdmcvRCuxHMvpeu7DDmoOLi0xcGl3z5UJDIPzckVHzZ1g6DHRd9ccqnrgGt_2e8OAj9eXYuePlAEcF6dHxYpn4SqOQf1mHNBds0mcJpRJEI5jxFmTpnn8C3vpi5yFCbTWlKSblblB02Z1FWH8BgKBXzP9iFqwcswwAac5hOTQiVhnhd3k90eOay3JFDGEjsTqJTCSDAawiTSveJHiqGuayzS6MPNuIjJ5bQTGJnicUhg0g-5X5gDUk"/>
+<div class="absolute inset-0 ring-1 ring-inset ring-white/10"></div>
+</div>
+<div class="absolute -top-4 -left-4 w-24 h-24 border-t-2 border-l-2 border-primary/40"></div>
+<div class="absolute -bottom-4 -right-4 w-24 h-24 border-b-2 border-r-2 border-primary/40"></div>
+</div>
+<div class="w-full md:w-7/12 space-y-8">
+<span class="text-primary text-xs font-bold tracking-[0.2em] uppercase">The Visionary</span>
+<h2 class="text-4xl md:text-5xl font-serif text-white">
+                        "We don't just design jewelry. We capture moments."
+                    </h2>
+<p class="text-text-secondary text-lg leading-relaxed font-light">
+                        Elena Vosque has spent over three decades redefining the boundaries of haute joaillerie. Her approach combines an architectural understanding of form with a poetic appreciation for light.
+                    </p>
+<div class="grid grid-cols-2 gap-8 pt-8 border-t border-white/5">
+<div>
+<span class="block text-3xl text-white font-serif mb-1">35+</span>
+<span class="text-sm text-text-secondary uppercase tracking-wider">Years of Design</span>
+</div>
+<div>
+<span class="block text-3xl text-white font-serif mb-1">12</span>
+<span class="text-sm text-text-secondary uppercase tracking-wider">International Awards</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-32 bg-background-dark">
+<div class="container mx-auto px-4 md:px-10">
+<div class="flex flex-col md:flex-row justify-between items-end mb-16">
+<div class="max-w-2xl">
+<span class="text-primary text-xs font-bold tracking-[0.2em] uppercase mb-4 block">Savoir-Faire</span>
+<h2 class="text-white text-4xl md:text-5xl font-serif">From Earth to Ether</h2>
+<p class="text-text-secondary mt-6 text-lg font-light">Witness the journey of a Lumière creation, from the depths of the earth to the light of the atelier.</p>
+</div>
+<a class="hidden md:flex items-center gap-2 text-white border-b border-white/30 pb-1 hover:border-primary hover:text-primary transition-colors mt-8 md:mt-0" href="#">
+<span class="text-xs font-bold uppercase tracking-widest">Visit the Atelier</span>
+<span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="group cursor-pointer">
+<div class="relative h-[500px] overflow-hidden rounded-sm mb-6">
+<img alt="Raw diamonds" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAxggxhfztzh4opyBTcMwW1Rlbb2Rw4lzJkUu_fbf2PHJX3MJ111mCB7rS57n5Eef9wKXGrSMEmdXBnu0BxWrR7LJBmXGaks2zF3SWESP09bqZlvVfEOvlOUM_5l4pouwJ81dEFdaLQoONX3xZA17n5Wc6NvWOlIHEbaIgRpicRNOQdy8p4J7zd-uCYz3dlLIe5pAwK22cq-KoPLSVURpnFP1BDu8P__3-t9cjmBjdbLLNdfpWxlQDcY3WyNH2EG3hjJ2yTHagoYu4"/>
+<div class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-all"></div>
+<div class="absolute bottom-0 left-0 w-full p-8 bg-gradient-to-t from-black/80 to-transparent">
+<span class="text-primary font-mono text-sm mb-2 block">01.</span>
+<h3 class="text-white text-2xl font-serif">Sourcing</h3>
+</div>
+</div>
+<p class="text-text-secondary text-sm leading-relaxed pr-4">
+                        We travel to the remotest corners of the globe to hand-select gemstones that meet our exacting standards for clarity, color, and ethical provenance.
+                    </p>
+</div>
+<div class="group cursor-pointer mt-0 md:mt-16">
+<div class="relative h-[500px] overflow-hidden rounded-sm mb-6">
+<img alt="Design Sketch" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBeXxhCXOBYhB0mU6aohvRwAlzA1vf3AqUkGEoSBLGJ9GLSOOj8HNj4azOf5B6JpQ9ehCZ77C_ULHyEjnj_HJsfw_TrfLKJyPrZgLgUGrplvhAhqTBG535kgbqEwd3WfIdduOZPskTHL0J-SIPWRZKsjAwgouX1C45litiH4uEuKoCwk7mLnIoYlrPKs7et6lCfBv0jth-oa4rA_sPPNcIrNqvFpb98c1gJqx2s4nE2HQ_iiwwv4gUlMk9De6YThjFXUWU-Tubef70"/>
+<div class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-all"></div>
+<div class="absolute bottom-0 left-0 w-full p-8 bg-gradient-to-t from-black/80 to-transparent">
+<span class="text-primary font-mono text-sm mb-2 block">02.</span>
+<h3 class="text-white text-2xl font-serif">Conception</h3>
+</div>
+</div>
+<p class="text-text-secondary text-sm leading-relaxed pr-4">
+                        Before gold is cast, the dream is born on paper. Our designers spend hundreds of hours refining the architecture of each piece to ensure perfect balance.
+                    </p>
+</div>
+<div class="group cursor-pointer">
+<div class="relative h-[500px] overflow-hidden rounded-sm mb-6">
+<img alt="Craftsmanship" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuByxlvjk3OQ7sEkb9PHzzUY4kQqguSeEyzSZDYR2CSMtc2LUUHw4PlI8xhNwjHuK0QiJTnDL7SBPZ2StvVXmFT8xz8XH5sPA0fFORtvMZDHN2pf7jIvUfEh-oGx-VjVXK_VMF1h8dCa8eKMa9BjzFm_H9P3EL-UcEFEO-4Oq0nE_7FPVdvVhK5QYHg8r9OFof4V2fJsi__dtz7ZidQExVxCIpLitVjAFM18CHfUr2g386GQlOWUBHNdWE9yYg0_HVb6_OimmFmi1jQ"/>
+<div class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-all"></div>
+<div class="absolute bottom-0 left-0 w-full p-8 bg-gradient-to-t from-black/80 to-transparent">
+<span class="text-primary font-mono text-sm mb-2 block">03.</span>
+<h3 class="text-white text-2xl font-serif">Creation</h3>
+</div>
+</div>
+<p class="text-text-secondary text-sm leading-relaxed pr-4">
+                        In our Paris atelier, master goldsmiths and setters work in tandem, using techniques passed down through generations to breathe life into the design.
+                    </p>
+</div>
+</div>
+</div>
+</section>
+<section class="py-24 px-4 bg-surface-dark border-t border-[#332919]">
+<div class="max-w-4xl mx-auto text-center">
+<h2 class="text-4xl md:text-5xl text-white font-serif mb-8">Begin Your Legacy</h2>
+<p class="text-text-secondary text-lg mb-12 max-w-xl mx-auto">
+                Whether you seek a piece from our collection or wish to commission a bespoke creation, we invite you to experience the extraordinary.
+            </p>
+<div class="flex flex-col sm:flex-row gap-6 justify-center">
+<button class="px-10 py-4 bg-primary text-background-dark font-bold text-sm uppercase tracking-widest rounded-sm hover:bg-[#ffb42e] transition-colors">
+                    View Collections
+                </button>
+<button class="px-10 py-4 bg-transparent border border-[#483a23] text-white font-bold text-sm uppercase tracking-widest rounded-sm hover:bg-[#483a23] transition-colors">
+                    Book Appointment
+                </button>
+</div>
+</div>
+</section>
+<footer class="bg-[#14100c] border-t border-[#26201a] pt-20 pb-10 px-4 md:px-10">
+<div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-20">
+<div class="lg:col-span-1">
+<h3 class="text-white text-2xl font-bold font-serif mb-6 tracking-wide">LUMIÈRE</h3>
+<p class="text-text-secondary text-sm leading-relaxed mb-8 opacity-80">
+                    Timeless elegance handcrafted for the modern connoisseur. Established in Paris, celebrated worldwide.
+                </p>
+<div class="flex gap-4 opacity-80">
+<a class="text-white hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined text-lg">public</span></a>
+<a class="text-white hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined text-lg">share</span></a>
+<a class="text-white hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined text-lg">favorite</span></a>
+</div>
+</div>
+<div>
+<h4 class="text-white text-xs font-bold uppercase tracking-widest mb-8">Boutiques</h4>
+<ul class="space-y-4">
+<li><a class="text-text-secondary hover:text-primary transition-colors text-sm font-light" href="#">Paris, Place Vendôme</a></li>
+<li><a class="text-text-secondary hover:text-primary transition-colors text-sm font-light" href="#">London, Mayfair</a></li>
+<li><a class="text-text-secondary hover:text-primary transition-colors text-sm font-light" href="#">New York, 5th Avenue</a></li>
+<li><a class="text-text-secondary hover:text-primary transition-colors text-sm font-light" href="#">Tokyo, Ginza</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-white text-xs font-bold uppercase tracking-widest mb-8">Services</h4>
+<ul class="space-y-4">
+<li><a class="text-text-secondary hover:text-primary transition-colors text-sm font-light" href="#">Bespoke Design</a></li>
+<li><a class="text-text-secondary hover:text-primary transition-colors text-sm font-light" href="#">Restoration</a></li>
+<li><a class="text-text-secondary hover:text-primary transition-colors text-sm font-light" href="#">Valuation</a></li>
+<li><a class="text-text-secondary hover:text-primary transition-colors text-sm font-light" href="#">Engraving</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-white text-xs font-bold uppercase tracking-widest mb-8">Newsletter</h4>
+<p class="text-text-secondary text-xs mb-6 opacity-80">Be the first to receive invitations to private viewings.</p>
+<form class="flex flex-col gap-3">
+<input class="bg-[#1f1a14] border border-[#332919] rounded-sm p-3 text-white text-sm focus:outline-none focus:border-primary placeholder:text-white/20 transition-colors" placeholder="Email address" type="email"/>
+<button class="bg-[#26201a] hover:bg-primary hover:text-background-dark text-text-secondary text-xs font-bold uppercase py-3 px-4 rounded-sm transition-all duration-300 tracking-widest border border-[#332919]">Subscribe</button>
+</form>
+</div>
+</div>
+<div class="max-w-7xl mx-auto border-t border-[#26201a] pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="text-white/30 text-[10px] uppercase tracking-wider">© 2024 Lumière Jewelry. All rights reserved.</p>
+<div class="flex gap-8">
+<a class="text-white/30 hover:text-white text-[10px] uppercase tracking-wider transition-colors" href="#">Privacy</a>
+<a class="text-white/30 hover:text-white text-[10px] uppercase tracking-wider transition-colors" href="#">Terms</a>
+<a class="text-white/30 hover:text-white text-[10px] uppercase tracking-wider transition-colors" href="#">Sitemap</a>
+</div>
+</div>
+</footer>
+</main>
+<style>
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+</style>
+
+</body></html>
