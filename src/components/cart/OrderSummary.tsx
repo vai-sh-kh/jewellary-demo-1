@@ -66,9 +66,15 @@ export default function OrderSummary({ subtotal, tax, shipping = 0 }: OrderSumma
           <span className="tracking-wide">Proceed to Checkout</span>
         </button>
         <div className="flex justify-center gap-6 mt-8 border-t border-white/5 pt-6">
-          <CreditCard className="text-white/20 w-8 h-8 hover:text-white/40 transition-colors cursor-help" title="Visa" />
-          <CreditCard className="text-white/20 w-8 h-8 hover:text-white/40 transition-colors cursor-help" title="Mastercard" />
-          <Wallet className="text-white/20 w-8 h-8 hover:text-white/40 transition-colors cursor-help" title="Paypal" />
+          <span title="Visa">
+            <CreditCard className="text-white/20 w-8 h-8 hover:text-white/40 transition-colors cursor-help" />
+          </span>
+          <span title="Mastercard">
+            <CreditCard className="text-white/20 w-8 h-8 hover:text-white/40 transition-colors cursor-help" />
+          </span>
+          <span title="Paypal">
+            <Wallet className="text-white/20 w-8 h-8 hover:text-white/40 transition-colors cursor-help" />
+          </span>
         </div>
       </div>
     </div>
